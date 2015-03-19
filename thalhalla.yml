@@ -14,9 +14,11 @@
     sudo: True
 
   - name: apt-get update and upgrade.
+    sudo: True
     action: apt upgrade=yes update_cache=yes
 
   - name: Installing zsh, vim, git, tmux, etc.
+    sudo: True
     action: apt name={{$item s}} state=latest
     with_items:
     - zsh
