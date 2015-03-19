@@ -11,7 +11,7 @@
   - name: Determining username
     action: shell whoami
     register: whoami
-    sudo: True
+    sudo: False
 
   - name: apt-get update and upgrade.
     sudo: True
@@ -31,7 +31,7 @@
     - exuberant-ctags
 
   - name: Changing the default shell to zsh
-    action: user shell=/bin/zsh user=${whoami.stdout}
+    action: user shell=/bin/zsh user={{ whoami }}
 
 - name: Entering Plugin Nirvana
   hosts: all
