@@ -19,7 +19,7 @@
 
   - name: Installing zsh, vim, git, tmux, etc.
     sudo: True
-    action: apt name={{$item s}} state=latest
+    action: apt name={{ item  }} state=latest
     with_items:
     - zsh
     - vim-gtk
