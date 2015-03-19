@@ -11,7 +11,7 @@
   - name: Determining username
     action: shell whoami
     register: whoami
-    sudo: False
+    sudo: True
 
   - name: apt-get update and upgrade.
     action: apt upgrade=yes update_cache=yes
