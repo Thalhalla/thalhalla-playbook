@@ -4,21 +4,12 @@
 ---
 
 - name: Bootstrapping developer environment
-  hosts: all
+  hosts: thalhalla
   vars:
-     NAME_contents: "{{ lookup('file', 'NAME') }}"
-     USERNAME_contents: "{{ lookup('file', 'USERNAME') }}"
+    NAME_contents: "{{ lookup('file', 'NAME') }}"
+    USERNAME_contents: "{{ lookup('file', 'USERNAME') }}"
 
   tasks:
-
-  - name: Determining username
-    shell:  whoami
-    register: whoami
-    sudo: False
-
-  - name: apt-get update and upgrade.
-    sudo: True
-    apt:  upgrade=yes update_cache=yes
 
   - name: Installing zsh, vim, git, tmux, etc.
     sudo: True
@@ -39,21 +30,3 @@
   - name: Changing the default shell to zsh
     sudo: True
     user:  shell=/bin/zsh name={{ USERNAME_contents }}
-
-- name: Entering Plugin Nirvana
-  hosts: all
-  sudo: False
-
-  tasks:
-
-  - name: Backing up existing ~/.zshrc
-    script: backupexistingzsh.sh  creates=/home/root/backupzshbootstrapped.txt
-
-  - name: Installing oh-my-zsh (https://github.com/robbyrussell/oh-my-zsh)
-    git:  repo=https://github.com/robbyrussell/oh-my-zsh dest=~/.oh-my-zsh
-
-  - name: Creating new ~/.zshrc
-    script: installohmyzshtemplate.sh  creates=/home/root/ohmyzshbootstrapped.txt
-
-  - name: Installing spf13-vim, The Ultimate Vim Distribution (http://vim.spf13.com)
-    script: installspf13vim.sh  creates=/home/root/vimspf13bootstrapped.txt

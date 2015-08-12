@@ -1,0 +1,21 @@
+# Ansible playbook for zsh
+#
+# Author: Josh Cox <josh 'at' webhosting coop>
+---
+
+- name: Bootstrapping zsh
+  hosts: thalhalla
+
+  tasks:
+  - name: Backing up existing ~/.zshrc
+    script: backupexistingzsh.sh  creates=/home/root/backupzshbootstrapped.txt
+
+  - name: Installing oh-my-zsh (https://github.com/robbyrussell/oh-my-zsh)
+    git:  repo=https://github.com/robbyrussell/oh-my-zsh dest=~/.oh-my-zsh
+
+  - name: Creating new ~/.zshrc
+    script: installohmyzshtemplate.sh  creates=/home/root/ohmyzshbootstrapped.txt
+
+  - name: Changing the default shell to zsh
+    sudo: True
+    user:  shell=/bin/zsh name={{ USERNAME_contents }}

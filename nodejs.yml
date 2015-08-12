@@ -1,0 +1,15 @@
+# Ansible playbook for SPF13
+#
+# Author: Josh Cox <josh 'at' webhosting coop>
+---
+
+- name: nodejs install
+  hosts: thalhalla
+
+  tasks:
+  - name: Installing nodejs-devl
+    sudo: True
+    apt:  name={{ item  }} state=latest
+    with_items:
+    - nodejs
+    - npm

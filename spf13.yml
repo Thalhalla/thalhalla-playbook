@@ -1,0 +1,11 @@
+# Ansible playbook for SPF13
+#
+# Author: Josh Cox <josh 'at' webhosting coop>
+---
+
+- name: SPF13 vim install
+  hosts: thalhalla
+
+  tasks:
+  - name: Installing spf13-vim, The Ultimate Vim Distribution (http://vim.spf13.com)
+    script: installspf13vim.sh  creates=/home/root/vimspf13bootstrapped.txt

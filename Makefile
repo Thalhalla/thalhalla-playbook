@@ -7,7 +7,24 @@ help:
 	@echo ""   2. make bootstrap       - run bootstrap playbook 
 	@echo ""   3. make play       - run thalhalla playbook 
 
-play: USERNAME thalhalla
+play: USERNAME update thalhalla
+
+full: play zsh spf13 ruby nodejs
+
+update:
+	ansible-playbook update.yml
+
+nodejs:
+	ansible-playbook nodejs.yml
+
+ruby:
+	ansible-playbook ruby.yml
+
+zsh:
+	ansible-playbook zsh.yml
+
+spf13:
+	ansible-playbook spf13.yml
 
 thalhalla:
 	ansible-playbook `cat NAME`.yml
