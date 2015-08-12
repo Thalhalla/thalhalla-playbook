@@ -1,0 +1,15 @@
+---
+- name: docker python
+  vars:
+     NAME_contents: "{{ lookup('file', 'NAME') }}"
+  hosts: "{{ NAME_contents }}"
+  sudo: True
+  tasks:
+  - name: update_cache
+    apt: update_cache=yes cache_valid_time=3600
+  - name: Install python
+    apt: name=python state=present
+  - name: Install python-pip
+    apt: name=python-pip state=present
+  - name: Install docker-py
+    pip: name=docker-py version=1.1.0

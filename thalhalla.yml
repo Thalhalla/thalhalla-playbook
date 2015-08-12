@@ -5,21 +5,24 @@
 
 - name: Bootstrapping developer environment
   hosts: all
+  vars:
+     NAME_contents: "{{ lookup('file', 'NAME') }}"
+     USERNAME_contents: "{{ lookup('file', 'USERNAME') }}"
 
   tasks:
 
   - name: Determining username
-    action: shell whoami
+    shell:  whoami
     register: whoami
     sudo: False
 
   - name: apt-get update and upgrade.
     sudo: True
-    action: apt upgrade=yes update_cache=yes
+    apt:  upgrade=yes update_cache=yes
 
   - name: Installing zsh, vim, git, tmux, etc.
     sudo: True
-    action: apt name={{ item  }} state=latest
+    apt:  name={{ item  }} state=latest
     with_items:
     - zsh
     - vim-gtk
@@ -27,11 +30,15 @@
     - byobu
     - kdiff3
     - htop
+    - curl
+    - wget 
+    - build-essential
     - synergy
     - exuberant-ctags
 
   - name: Changing the default shell to zsh
-    action: user shell=/bin/zsh user={{ whoami }}
+    sudo: True
+    user:  shell=/bin/zsh name={{ USERNAME_contents }}
 
 - name: Entering Plugin Nirvana
   hosts: all
@@ -40,13 +47,13 @@
   tasks:
 
   - name: Backing up existing ~/.zshrc
-    action: shell if [ -f ~/.zshrc ]; then mv ~/.zshrc{,.orig}; fi
+    script: backupexistingzsh.sh  creates=/home/root/backupzshbootstrapped.txt
 
   - name: Installing oh-my-zsh (https://github.com/robbyrussell/oh-my-zsh)
-    action: git repo=https://github.com/robbyrussell/oh-my-zsh dest=~/.oh-my-zsh
+    git:  repo=https://github.com/robbyrussell/oh-my-zsh dest=~/.oh-my-zsh
 
   - name: Creating new ~/.zshrc
-    action: shell cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+    script: installohmyzshtemplate.sh  creates=/home/root/ohmyzshbootstrapped.txt
 
   - name: Installing spf13-vim, The Ultimate Vim Distribution (http://vim.spf13.com)
-    action: shell curl http://j.mp/spf13-vim3 -L -o - | sh
+    script: installspf13vim.sh  creates=/home/root/vimspf13bootstrapped.txt

@@ -1,0 +1,5 @@
+[targets]
+localhost ansible_connection=local
+
+[thalhalla]
+localhost
