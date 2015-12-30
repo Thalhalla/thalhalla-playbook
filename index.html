@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Thalhalla-playbook by Thalhalla</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Thalhalla-playbook</h1>
+        <h2>Have Ansible Install Zsh, Oh-my-zsh Ultimate vim distro (spf13), synergy, git, kdiff3, exuberant-ctags, and more</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/Thalhalla/thalhalla-playbook/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/Thalhalla/thalhalla-playbook/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/Thalhalla/thalhalla-playbook" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="thalhalla-playbook" class="anchor" href="#thalhalla-playbook" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thalhalla-Playbook</h1>
+
+<p>On a debian machine, have Ansible Install Zsh, Oh-my-zsh Ultimate vim distro (spf13), synergy, git, kdiff3, exuberant-ctags, and more</p>
+
+<p>Installs</p>
+
+<ul>
+<li>build-essential</li>
+<li>git</li>
+<li>wget</li>
+<li>curl</li>
+<li>zsh</li>
+<li>oh-my-zsh <a href="https://github.com/robbyrussell/oh-my-zsh">The Ultimate Zsh Distribution</a>
+</li>
+<li>vim-athena</li>
+<li>exuberant-ctags</li>
+<li>spf13-vim, <a href="http://vim.spf13.com">The Ultimate Vim Distribution</a>
+</li>
+<li>python</li>
+<li>python-pip</li>
+<li>Ansible</li>
+<li>docker</li>
+<li>docker-py</li>
+<li>nodejs-devl and npm</li>
+<li>ruby-dev</li>
+<li>byobu</li>
+<li>rvm and then ruby from rvm</li>
+<li>kdiff3</li>
+<li>htop</li>
+<li>synergy</li>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h4>
+<a id="oneliner" class="anchor" href="#oneliner" aria-hidden="true"><span class="octicon octicon-link"></span></a>Oneliner</h4>
+
+<p>you'll need sudo for this</p>
+
+<pre><code>curl https://raw.githubusercontent.com/Thalhalla/thalhalla-playbook/master/bootstrapThalhalla.sh | bash
+</code></pre>
+
+<h4>
+<a id="ansible-playbook" class="anchor" href="#ansible-playbook" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ansible Playbook</h4>
+
+<p>That will install the full recipe to localhost, which is a good place to start. If you'd like you can create your own hosts file or symlink one here in this directory and then</p>
+
+<pre><code>make full
+</code></pre>
+
+<p>and all hosts you specify should be given the full treatment</p>
+
+<p>Adapted from <a href="https://github.com/lmacken/ansible-hacker-playbook">this</a> originally, but it was yum, not apt, so I made my own</p>
+
+<p>For more related errata look here:
+<a href="http://joshuacox.github.io/">joshuacox.github.io</a></p>
+      </section>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-69335315-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
