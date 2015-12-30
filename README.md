@@ -46,3 +46,6 @@ make full
 and all hosts you specify should be given the full treatment
 
 Adapted from [this](https://github.com/lmacken/ansible-hacker-playbook) originally, but it was yum, not apt, so I made my own
+
+For more related errata look here:
+(joshuacox.github.io)[http://joshuacox.github.io/]
