@@ -16,5 +16,8 @@ cd freezing-cyril/src
 ./freeze
 cd $TMP_DIR
 
+cd
+sudo gem install bundler
+
 
 rm -Rf $TMP_DIR

@@ -18,6 +18,9 @@ dev: zsh spf13 ruby nodejs
 
 thoth: thalhalla
 
+bundle:
+	bundle install
+
 update:
 	ansible-playbook -i hosts  update.yml
 
