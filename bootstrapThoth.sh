@@ -18,6 +18,7 @@ cd $TMP_DIR
 
 cd
 sudo gem install bundler
+bundle install
 
 
 rm -Rf $TMP_DIR
