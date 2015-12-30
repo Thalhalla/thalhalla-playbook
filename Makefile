@@ -3,17 +3,20 @@ all: help
 help:
 	@echo ""
 	@echo "-- Help Menu"
-	@echo ""   1. make build       - run apt-get essentials 
-	@echo ""   2. make bootstrap       - run bootstrap playbook 
-	@echo ""   3. make play       - run thalhalla playbook 
+	@echo ""   1. make local       - run thalhalla playbook locally
+	@echo ""   2. make full       - run thalhalla playbook on hosts file
 
-play: USERNAME update thalhalla
+begin: USERNAME update
 
-local: localbootstrap play dev
+play: begin dev thoth
 
-full: bootstrap play dev
+local: localbootstrap play
+
+full: bootstrap play
 
 dev: zsh spf13 ruby nodejs
+
+thoth: thalhalla
 
 update:
 	ansible-playbook -i hosts  update.yml
