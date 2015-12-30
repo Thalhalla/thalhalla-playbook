@@ -14,7 +14,7 @@ local: localbootstrap play
 
 full: bootstrap play
 
-dev: zsh spf13 ruby nodejs
+dev: zsh spf13 nodejs ruby
 
 thoth: thalhalla
 
