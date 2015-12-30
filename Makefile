@@ -18,9 +18,24 @@ dev: zsh spf13 ruby nodejs
 
 thoth: thalhalla
 
+test: builddocker rundocker
+
 bundle:
 	-@rm Gemfile.lock
 	bundle install
+
+builddocker:
+	/usr/bin/time -v docker build -t thalhalla-test
+
+rundocker:
+	$(eval TMP := $(shell mktemp -d --suffix=ThalhallaDOCKERTMP))
+	chmod 777 $(TMP)
+	@docker run --name=thalhalla-test \
+	--cidfile="cid" \
+	-v $(TMP):/tmp \
+	-d \
+	-rm \
+	-t thalhalla-test
 
 update:
 	ansible-playbook -i hosts  update.yml
