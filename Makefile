@@ -19,6 +19,7 @@ dev: zsh spf13 ruby nodejs
 thoth: thalhalla
 
 bundle:
+	-@rm Gemfile.lock
 	bundle install
 
 update:

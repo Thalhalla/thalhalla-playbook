@@ -16,7 +16,7 @@ cd freezing-cyril/src
 ./freeze
 cd $TMP_DIR
 
-cd
+wget https://raw.githubusercontent.com/Thalhalla/thalhalla-playbook/master/Gemfile
 sudo gem install bundler
 bundle install
 
