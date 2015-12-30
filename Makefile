@@ -9,33 +9,39 @@ help:
 
 play: USERNAME update thalhalla
 
-full: play zsh spf13 ruby nodejs
+full: localbootstrap play zsh spf13 ruby nodejs
 
 update:
-	ansible-playbook update.yml
+	ansible-playbook -i hosts  update.yml
 
 nodejs:
-	ansible-playbook nodejs.yml
+	ansible-playbook -i hosts  nodejs.yml
 
 ruby:
-	ansible-playbook ruby.yml
+	ansible-playbook -i hosts  ruby.yml
 
 zsh:
-	ansible-playbook zsh.yml
+	ansible-playbook -i hosts  zsh.yml
 
 spf13:
-	ansible-playbook spf13.yml
+	ansible-playbook -i hosts  spf13.yml
 
 thalhalla:
-	ansible-playbook `cat NAME`.yml
+	ansible-playbook -i hosts  `cat NAME`.yml
 
-prep: build bootstrap
+prep: build localbootstrap
 
 build:
 	sudo apt-get install -y ansible git build-essential aptitude
+	date -I>build
 
 bootstrap:
-	ansible-playbook bootstrapAnsible.yml
+	ansible-playbook -i hosts  bootstrapAnsible.yml
+
+localbootstrap:
+	sudo bash bootstrapansible.sh
+	sudo bash installansible.sh
+	date -I>localbootstrap
 
 NAME:
 	@while [ -z "$$NAME" ]; do \

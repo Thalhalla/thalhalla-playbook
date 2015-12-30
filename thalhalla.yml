@@ -16,13 +16,13 @@
     apt:  name={{ item  }} state=latest
     with_items:
     - zsh
-    - vim-gtk
+    - vim-athena
     - git
     - byobu
     - kdiff3
     - htop
     - curl
-    - wget 
+    - wget
     - build-essential
     - synergy
     - exuberant-ctags

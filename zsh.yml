@@ -4,6 +4,8 @@
 ---
 
 - name: Bootstrapping zsh
+  vars:
+    USERNAME_contents: "{{ lookup('file', 'USERNAME') }}"
   hosts: thalhalla
 
   tasks:
