@@ -9,7 +9,11 @@ help:
 
 play: USERNAME update thalhalla
 
-full: localbootstrap play zsh spf13 ruby nodejs
+local: localbootstrap play dev
+
+full: bootstrap play dev
+
+dev: zsh spf13 ruby nodejs
 
 update:
 	ansible-playbook -i hosts  update.yml
