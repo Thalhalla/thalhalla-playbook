@@ -11,14 +11,10 @@ curl https://raw.githubusercontent.com/joshuacox/bomsaway/master/bootstrapbomsaw
 # Docker
 curl https://raw.githubusercontent.com/joshuacox/roustabout/master/DebianInstall|bash
 
+# Freezing Cyril
 git clone https://github.com/joshuacox/freezing-cyril.git
 cd freezing-cyril/src
 ./freeze
 cd $TMP_DIR
-
-wget https://raw.githubusercontent.com/Thalhalla/thalhalla-playbook/master/Gemfile
-sudo gem install bundler
-bundle install
-
 
 rm -Rf $TMP_DIR

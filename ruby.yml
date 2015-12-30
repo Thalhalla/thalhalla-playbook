@@ -12,7 +12,7 @@
     apt:  name={{ item  }} state=latest
     with_items:
     - ruby-dev
-    - vim-gtk
     - git
   - name: Installing rvm and then ruby
     script: installrvm.sh  creates=/home/root/rvmbootstrapped.txt
+    script: gemInstaller.sh
