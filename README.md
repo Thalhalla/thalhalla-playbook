@@ -22,8 +22,28 @@ On a debian machine, have Ansible Install Zsh, Oh-my-zsh Ultimate vim distro (sp
   - byobu
   - rvm and then ruby from rvm
   - kdiff3
+  - tree
   - htop
   - synergy
+  - keychain
+  - awesome
+  - nload
+  - iftop
+  - iptraf
+  - nethogs
+  - bmon
+  - slurm
+  - tcptrack
+  - vnstat
+  - bwm-ng
+  - cbm
+  - speedometer
+  - netdiag
+  - ifstat
+  - dstat
+  - collectl
+  - nmap
+  - sshfs
 
 ## Usage
 

@@ -23,9 +23,28 @@
     - htop
     - curl
     - wget
+    - keychain
+    - awesome
     - build-essential
     - synergy
     - exuberant-ctags
+    - nload
+    - iftop
+    - iptraf
+    - nethogs
+    - bmon
+    - slurm
+    - tcptrack
+    - vnstat
+    - bwm-ng
+    - cbm
+    - speedometer
+    - netdiag
+    - ifstat
+    - dstat
+    - collectl
+    - nmap
+    - sshfs
 
   - name: Changing the default shell to zsh
     sudo: True
