@@ -3,3 +3,4 @@ hosts
 Gemfile.lock
 localbootstrap
 npm-debug.log
+cid

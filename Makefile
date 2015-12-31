@@ -34,8 +34,7 @@ rundocker:
 	--cidfile="cid" \
 	-v $(TMP):/tmp \
 	-d \
-	--privileged
-	-rm \
+	--privileged \
 	-t thalhalla-test
 
 update:
