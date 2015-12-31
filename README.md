@@ -47,6 +47,16 @@ On a debian machine, have Ansible Install Zsh, Oh-my-zsh Ultimate vim distro (sp
   - ack-grep
   - net-tools
   - dnsutils
+  - chromium
+  - iceweasel
+  - icedove
+  - lynx-cur
+  - links2
+  - w3m
+  - w3m-img
+  - irssi
+  - mutt
+  - tree
 
 ## Usage
 

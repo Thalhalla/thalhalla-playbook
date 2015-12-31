@@ -48,6 +48,18 @@
     - ack-grep
     - net-tools
     - dnsutils
+    - tilda
+    - chromium
+    - iceweasel
+    - icedove
+    - lynx-cur
+    - links2
+    - w3m
+    - w3m-img
+    - irssi
+    - mutt
+    - tree
+
 
 
   - name: Changing the default shell to zsh

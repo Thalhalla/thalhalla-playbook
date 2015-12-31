@@ -12,6 +12,8 @@ curl https://raw.githubusercontent.com/joshuacox/bomsaway/master/bootstrapbomsaw
 curl https://raw.githubusercontent.com/joshuacox/roustabout/master/DebianInstall |bash
 # local-base
 curl https://raw.githubusercontent.com/joshuacox/local-base/master/bootstrapbase.sh |bash
+# ack rename
+sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
 
 # Freezing Cyril
 git clone https://github.com/joshuacox/freezing-cyril.git
