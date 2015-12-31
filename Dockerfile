@@ -21,9 +21,11 @@ ENV LANG en_US.UTF-8
 RUN useradd -md /home/test test ; \
 echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers ; \
 gpasswd -a test sudo 
+COPY bootstrapThalhalla.sh /home/test/bootstrapThalhalla.sh
 USER test
 WORKDIR /home/test
 ENV mybootstrap 12345
-RUN curl https://raw.githubusercontent.com/Thalhalla/thalhalla-playbook/master/bootstrapThalhalla.sh | bash
+#RUN curl https://raw.githubusercontent.com/Thalhalla/thalhalla-playbook/master/bootstrapThalhalla.sh | bash
+RUN bash bootstrapThalhalla.sh
 
 CMD ["/bin/bash"]
