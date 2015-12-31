@@ -18,10 +18,9 @@ ENV LANG en_US.UTF-8
 # RUN echo 'en_US.ISO-8859-15 ISO-8859-15'>>/etc/locale.gen
 # RUN echo 'en_US ISO-8859-1'>>/etc/locale.gen
 
-
-RUN useradd test
+RUN useradd -md /home/test test
 USER test
-WORKDIR /tmp
+WORKDIR /home/test
 RUN curl https://raw.githubusercontent.com/Thalhalla/thalhalla-playbook/master/bootstrapThalhalla.sh | bash
 
 CMD ["/bin/bash"]
