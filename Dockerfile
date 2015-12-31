@@ -23,7 +23,7 @@ echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers ; \
 gpasswd -a test sudo 
 USER test
 WORKDIR /home/test
-ENV mybootstrap 1234
+ENV mybootstrap 12345
 RUN curl https://raw.githubusercontent.com/Thalhalla/thalhalla-playbook/master/bootstrapThalhalla.sh | bash
 
 CMD ["/bin/bash"]

@@ -1,5 +1,5 @@
 #!/bin/bash
-TMP_DIR=$(mktemp -d --suffix='.bomsaway')
+TMP_DIR=$(mktemp -d --suffix='.thalhalla')
 
 cd $TMP_DIR
 #sudo apt-get update 
