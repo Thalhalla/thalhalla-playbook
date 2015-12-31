@@ -18,7 +18,7 @@ cd freezing-cyril/src
 cd $TMP_DIR
 
 
-LINE_TO_ADD="eval `keychain --eval id_rsa id_dsa id_ecdsa`"
+LINE_TO_ADD='eval `keychain --eval id_rsa id_dsa id_ecdsa`'
 ZSHRC_LOCATION=~/.zshrc
 BASH_PROFILE_LOCATION=~/.bash_profile
 
