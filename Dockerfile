@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get -y update; \
 apt-get -y dist-upgrade; \
-apt-get -y install locales curl; \
+apt-get -y install locales curl git sudo build-essential; \
 echo 'en_US.UTF-8 UTF-8'>>/etc/locale.gen; \
 locale-gen; \
 apt-get -y autoremove; \
@@ -18,9 +18,12 @@ ENV LANG en_US.UTF-8
 # RUN echo 'en_US.ISO-8859-15 ISO-8859-15'>>/etc/locale.gen
 # RUN echo 'en_US ISO-8859-1'>>/etc/locale.gen
 
-RUN useradd -md /home/test test
+RUN useradd -md /home/test test ; \
+echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers ; \
+gpasswd -a test sudo 
 USER test
 WORKDIR /home/test
+ENV mybootstrap 1234
 RUN curl https://raw.githubusercontent.com/Thalhalla/thalhalla-playbook/master/bootstrapThalhalla.sh | bash
 
 CMD ["/bin/bash"]
