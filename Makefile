@@ -25,7 +25,7 @@ bundle:
 	bundle install
 
 builddocker:
-	/usr/bin/time -v docker build -t thalhalla-test
+	/usr/bin/time -v docker build -t thalhalla-test .
 
 rundocker:
 	$(eval TMP := $(shell mktemp -d --suffix=ThalhallaDOCKERTMP))
@@ -34,6 +34,7 @@ rundocker:
 	--cidfile="cid" \
 	-v $(TMP):/tmp \
 	-d \
+	--privileged
 	-rm \
 	-t thalhalla-test
 

@@ -3,13 +3,15 @@ TMP_DIR=$(mktemp -d --suffix='.thoth')
 cd $TMP_DIR
 
 # VV
-curl https://raw.githubusercontent.com/joshuacox/vv/master/bootstrapvv.sh|bash
+curl https://raw.githubusercontent.com/joshuacox/vv/master/bootstrapvv.sh |bash
 # Roustabout
-curl https://raw.githubusercontent.com/joshuacox/roustabout/master/bootstraproustabout.sh|bash
+curl https://raw.githubusercontent.com/joshuacox/roustabout/master/bootstraproustabout.sh |bash
 # bomsaway
-curl https://raw.githubusercontent.com/joshuacox/bomsaway/master/bootstrapbomsaway.sh|bash
+curl https://raw.githubusercontent.com/joshuacox/bomsaway/master/bootstrapbomsaway.sh |bash
 # Docker
-curl https://raw.githubusercontent.com/joshuacox/roustabout/master/DebianInstall|bash
+curl https://raw.githubusercontent.com/joshuacox/roustabout/master/DebianInstall |bash
+# local-base
+curl https://raw.githubusercontent.com/joshuacox/local-base/master/bootstrapbase.sh |bash
 
 # Freezing Cyril
 git clone https://github.com/joshuacox/freezing-cyril.git
