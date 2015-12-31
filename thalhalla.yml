@@ -45,6 +45,10 @@
     - collectl
     - nmap
     - sshfs
+    - ack-grep
+    - net-tools
+    - dnsutils
+
 
   - name: Changing the default shell to zsh
     sudo: True

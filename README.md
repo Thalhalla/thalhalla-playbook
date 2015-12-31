@@ -44,6 +44,9 @@ On a debian machine, have Ansible Install Zsh, Oh-my-zsh Ultimate vim distro (sp
   - collectl
   - nmap
   - sshfs
+  - ack-grep
+  - net-tools
+  - dnsutils
 
 ## Usage
 
