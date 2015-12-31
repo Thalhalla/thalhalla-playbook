@@ -14,6 +14,8 @@ curl https://raw.githubusercontent.com/joshuacox/roustabout/master/DebianInstall
 curl https://raw.githubusercontent.com/joshuacox/local-base/master/bootstrapbase.sh |bash
 # ack rename
 sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
+# sysdig
+curl -s https://s3.amazonaws.com/download.draios.com/stable/install-sysdig | sudo bash
 
 # Freezing Cyril
 git clone https://github.com/joshuacox/freezing-cyril.git
