@@ -25,6 +25,7 @@
     - wget
     - keychain
     - awesome
+    - awesome-extra
     - build-essential
     - synergy
     - exuberant-ctags
@@ -59,6 +60,7 @@
     - irssi
     - mutt
     - tree
+    - ssh-askpass-gnome
 
 
 
