@@ -59,6 +59,9 @@ On a debian machine, have Ansible Install Zsh, Oh-my-zsh Ultimate vim distro (sp
   - tree
   - ssh-askpass-gnome
   - autokey
+  - finch
+  - pidgin
+  - pidgin-otr
 
 ## Usage
 
