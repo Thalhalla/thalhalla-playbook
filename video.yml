@@ -11,7 +11,7 @@
 
   tasks:
 
-    - name: Installing blender, gimp, inkcsape, etc.
+  - name: Installing blender, gimp, inkcsape, etc.
     sudo: True
     apt:  name={{ item  }} state=latest
     with_items:
