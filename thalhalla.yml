@@ -61,14 +61,21 @@
     - mutt
     - tree
     - ssh-askpass-gnome
-    - autokey
+    - autokey-qt
     - finch
     - pidgin
     - pidgin-otr
-
-
-
-  - name: Changing the default shell to zsh
-    sudo: True
-    user:  shell=/bin/zsh name={{ USERNAME_contents }}
-  - script: bootstrapThoth.sh
+    - xbindkeys
+    - xscreensaver-screensaver-dizzy
+    - kscreensaver
+    - kscreensaver-xsavers
+    - rss-glx
+    - unicode-screensaver
+    - wmmatrix
+    - xscreensaver
+    - xscreensaver-data
+    - xscreensaver-data-extra
+    - xscreensaver-gl
+    - xscreensaver-gl-extra
+    - xscreensaver-screensaver-bsod
+    - xscreensaver-screensaver-webcollage

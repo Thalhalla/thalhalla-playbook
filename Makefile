@@ -8,15 +8,13 @@ help:
 
 begin: USERNAME update
 
-play: begin dev thoth
+play: begin dev thalhalla thoth
 
 local: localbootstrap play
 
 full: bootstrap play
 
 dev: zsh spf13 nodejs ruby
-
-thoth: thalhalla
 
 test: builddocker rundocker
 
@@ -54,6 +52,9 @@ spf13:
 
 thalhalla:
 	ansible-playbook -i hosts  `cat NAME`.yml
+
+thoth:
+	ansible-playbook -i hosts  thoth.yml
 
 prep: build localbootstrap
 
