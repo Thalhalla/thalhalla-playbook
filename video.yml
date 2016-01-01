@@ -1,0 +1,24 @@
+# Ansible playbook for thalhalla video (includes all graphics arts [ie anything visual])
+#
+# Author: Josh Cox <josh 'at' webhosting coop>
+---
+
+- name: Bootstrapping video developer environment
+  hosts: thalhalla
+  vars:
+    NAME_contents: "{{ lookup('file', 'NAME') }}"
+    USERNAME_contents: "{{ lookup('file', 'USERNAME') }}"
+
+  tasks:
+
+    - name: Installing blender, gimp, inkcsape, etc.
+    sudo: True
+    apt:  name={{ item  }} state=latest
+    with_items:
+    - zsh
+    - blender
+    - inkscape
+    - gimp
+    - xsane
+    - hugin
+    - hugin-tools

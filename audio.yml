@@ -1,0 +1,20 @@
+# Ansible playbook for thalhalla audio
+#
+# Author: Josh Cox <josh 'at' webhosting coop>
+---
+
+- name: Bootstrapping audio developer environment
+  hosts: thalhalla
+  vars:
+    NAME_contents: "{{ lookup('file', 'NAME') }}"
+    USERNAME_contents: "{{ lookup('file', 'USERNAME') }}"
+
+  tasks:
+
+    - name: Installing ardour, qtractor, qsynth, etc.
+    sudo: True
+    apt:  name={{ item  }} state=latest
+    with_items:
+      - ardour
+      - qtractor
+      - qsynth

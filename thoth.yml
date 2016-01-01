@@ -1,0 +1,16 @@
+# Ansible playbook for thoth
+#
+# Author: Josh Cox <josh 'at' webhosting coop>
+---
+
+- name: Bootstrapping thoth environment
+  hosts: thalhalla
+  vars:
+    NAME_contents: "{{ lookup('file', 'NAME') }}"
+    USERNAME_contents: "{{ lookup('file', 'USERNAME') }}"
+
+  tasks:
+  - name: Changing the default shell to zsh
+    sudo: True
+    user:  shell=/bin/zsh name={{ USERNAME_contents }}
+  - script: bootstrapThoth.sh

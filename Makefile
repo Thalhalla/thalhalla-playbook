@@ -12,7 +12,7 @@ play: begin dev thalhalla thoth
 
 local: localbootstrap play
 
-full: bootstrap play
+full: bootstrap play video audio
 
 dev: zsh spf13 nodejs ruby
 
@@ -46,6 +46,12 @@ ruby:
 
 zsh:
 	ansible-playbook -i hosts  zsh.yml
+
+video:
+	ansible-playbook -i hosts  video.yml
+
+audio:
+	ansible-playbook -i hosts  audio.yml
 
 spf13:
 	ansible-playbook -i hosts  spf13.yml
