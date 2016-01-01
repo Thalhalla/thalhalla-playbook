@@ -58,6 +58,7 @@ On a debian machine, have Ansible Install Zsh, Oh-my-zsh Ultimate vim distro (sp
   - mutt
   - tree
   - ssh-askpass-gnome
+  - autokey
 
 ## Usage
 
