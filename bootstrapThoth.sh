@@ -2,16 +2,18 @@
 TMP_DIR=$(mktemp -d --suffix='.thoth')
 cd $TMP_DIR
 
+# enable tmpfs for tmp
+sudo systemctl enable tmp.mount
 # VV
-curl https://raw.githubusercontent.com/joshuacox/vv/master/bootstrapvv.sh |bash
+curl https://raw.githubusercontent.com/joshuacox/vv/master/bootstrapvv.sh |sudo bash
 # Roustabout
-curl https://raw.githubusercontent.com/joshuacox/roustabout/master/bootstraproustabout.sh |bash
+curl https://raw.githubusercontent.com/joshuacox/roustabout/master/bootstraproustabout.sh |sudo bash
 # bomsaway
-curl https://raw.githubusercontent.com/joshuacox/bomsaway/master/bootstrapbomsaway.sh |bash
+curl https://raw.githubusercontent.com/joshuacox/bomsaway/master/bootstrapbomsaway.sh |sudo bash
 # Docker
-curl https://raw.githubusercontent.com/joshuacox/roustabout/master/DebianInstall |bash
+curl https://raw.githubusercontent.com/joshuacox/roustabout/master/DebianInstall |sudo bash
 # local-base
-curl https://raw.githubusercontent.com/joshuacox/local-base/master/bootstrapbase.sh |bash
+curl https://raw.githubusercontent.com/joshuacox/local-base/master/bootstrapbase.sh |sudo bash
 # ack rename
 sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
 # sysdig
