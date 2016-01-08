@@ -8,11 +8,11 @@ help:
 
 begin: USERNAME update
 
-play: begin dev thalhalla thoth
+play: begin dev thalhalla thoth video audio
 
 local: localbootstrap play
 
-full: bootstrap play video audio
+full: bootstrap play
 
 dev: zsh spf13 nodejs ruby
 
@@ -73,7 +73,7 @@ bootstrap:
 
 localbootstrap:
 	sudo bash bootstrapansible.sh
-	sudo bash installansible.sh
+	bash installansible.sh
 	date -I>localbootstrap
 
 NAME:
@@ -85,3 +85,6 @@ USERNAME:
 	@while [ -z "$$USERNAME" ]; do \
 		read -r -p "Enter the name you wish to associate with this container [USERNAME]: " USERNAME; echo "$$USERNAME">>USERNAME; cat USERNAME; \
 	done ;
+
+clean:
+	-rm localbootstrap

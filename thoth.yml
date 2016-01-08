@@ -11,6 +11,6 @@
 
   tasks:
   - name: Changing the default shell to zsh
-    sudo: True
+    become: True
     user:  shell=/bin/zsh name={{ USERNAME_contents }}
   - script: bootstrapThoth.sh

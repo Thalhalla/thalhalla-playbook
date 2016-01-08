@@ -3,7 +3,7 @@
   vars:
      NAME_contents: "{{ lookup('file', 'NAME') }}"
   hosts: "{{ NAME_contents }}"
-  sudo: True
+  become: True
   tasks:
   - name: update_cache
     apt: update_cache=yes cache_valid_time=3600
@@ -13,3 +13,5 @@
     apt: name=python-pip state=present
   - name: Install docker-py
     pip: name=docker-py version=1.1.0
+  - name: Install pyyaml
+    pip: name=pyyaml version=1.1.0

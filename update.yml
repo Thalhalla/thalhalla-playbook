@@ -5,9 +5,7 @@
 
 - name: update developer environment
   hosts: thalhalla
-
   tasks:
-
   - name: apt-get update and upgrade.
-    sudo: True
+    become: True
     apt:  upgrade=yes update_cache=yes cache_valid_time=7200

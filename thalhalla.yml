@@ -12,7 +12,7 @@
   tasks:
 
   - name: Installing zsh, vim, git, tmux, etc.
-    sudo: True
+    become: True
     apt:  name={{ item  }} state=latest
     with_items:
     - zsh
@@ -81,3 +81,20 @@
     - xscreensaver-gl-extra
     - xscreensaver-screensaver-bsod
     - xscreensaver-screensaver-webcollage
+    - vorbis-tools
+    - libreadline6-dev
+    - zlib1g-dev
+    - libssl-dev
+    - libyaml-dev
+    - libsqlite3-dev
+    - sqlite3
+    - autoconf
+    - libgdbm-dev
+    - libncurses5-dev
+    - automake
+    - libtool
+    - bison
+    - libffi-dev
+    - qemu-kvm
+    - libvirt-bin
+    - virt-manager

@@ -8,7 +8,7 @@
 
   tasks:
   - name: Installing ruby-devl
-    sudo: True
+    become: True
     apt:  name={{ item  }} state=latest
     with_items:
     - ruby-dev

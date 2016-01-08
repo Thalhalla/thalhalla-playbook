@@ -19,5 +19,5 @@
     script: installohmyzshtemplate.sh  creates=/home/root/ohmyzshbootstrapped.txt
 
   - name: Changing the default shell to zsh
-    sudo: True
+    become: True
     user:  shell=/bin/zsh name={{ USERNAME_contents }}

@@ -1,4 +1,5 @@
 #!/bin/bash
+
 TMP_DIR=$(mktemp -d --suffix='.thoth')
 cd $TMP_DIR
 
@@ -24,6 +25,7 @@ git clone https://github.com/joshuacox/freezing-cyril.git
 cd freezing-cyril/src
 ./freeze
 cd $TMP_DIR
+sudo gpasswd -a $USER docker
 
 
 LINE_TO_ADD='eval `keychain --eval id_rsa id_dsa id_ecdsa`'

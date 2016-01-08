@@ -9,7 +9,7 @@
   tasks:
   -  script: nodelatest.sh
   - name: Installing nodejs-devl
-    sudo: True
+    become: True
     apt:  name={{ item  }} state=latest
     with_items:
     - nodejs

@@ -12,7 +12,7 @@
   tasks:
 
   - name: Installing blender, gimp, inkcsape, etc.
-    sudo: True
+    become: True
     apt:  name={{ item  }} state=latest
     with_items:
     - zsh
