@@ -100,3 +100,4 @@
     - virt-manager
     - xclip
     - klipper
+    - shellcheck

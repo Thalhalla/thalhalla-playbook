@@ -23,7 +23,9 @@ curl -s https://s3.amazonaws.com/download.draios.com/stable/install-sysdig | sud
 # Freezing Cyril
 cd ~/git
 git clone https://github.com/joshuacox/freezing-cyril.git
-cd freezing-cyril/src
+cd freezing-cyril
+git pull
+cd src
 ./freeze
 
 sudo gpasswd -a $USER docker
@@ -32,6 +34,7 @@ sudo gpasswd -a $USER docker
 cd ~/git
 git clone https://github.com/joshuacox/dotfiles.git
 cd dotfiles
+git pull
 make
 
 cd $TMP_DIR
