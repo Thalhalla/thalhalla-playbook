@@ -104,10 +104,10 @@
     - xcowsay
     - fortune
     - fortune-mod
-    - fortune-off
-    - fortune-mario
-    - fortune-bofh-excuses
-    - fortune-debian-hints
+    - fortunes-off
+    - fortunes-mario
+    - fortunes-bofh-excuses
+    - fortunes-debian-hints
     - irssi
     - irssi-scripts
     - irssi-plugin-otr
