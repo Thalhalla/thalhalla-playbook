@@ -1,6 +1,5 @@
 # Thalhalla-Playbook
 
-
 On a debian machine, have Ansible Install Zsh, Oh-my-zsh Ultimate vim distro (spf13), synergy, git, kdiff3, exuberant-ctags, and more
 
   Installs
