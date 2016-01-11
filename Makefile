@@ -3,8 +3,24 @@ all: help
 help:
 	@echo ""
 	@echo "-- Help Menu"
-	@echo ""   1. make local       - run thalhalla playbook locally
-	@echo ""   2. make full       - run thalhalla playbook on hosts file
+	@echo ""   1. make init       - acquire sudo (and all groups) for your local user and initialize apt with a fast mirror
+	@echo ""   2. make local       - run thalhalla playbook locally
+	@echo ""   3. make full       - run thalhalla playbook on hosts file
+
+init:
+
+init:
+	$(eval USERNAME := $(shell cat USERNAME))
+	$(eval TARGET := $(shell pwd))
+	@echo "This script requires root access to grant you sudo!"
+	@sleep 1
+	@echo "$(USERNAME)"
+	@echo "$(TARGET)"
+	su -c "bash $(TARGET)/acquire_sudo.sh $(USERNAME)"
+	@echo "Now log out and log back in to attain sudo status"
+
+netselect:
+	sudo bash netselect.sh
 
 begin: USERNAME update
 
