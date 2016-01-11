@@ -3,13 +3,18 @@ all: help
 help:
 	@echo ""
 	@echo "-- Help Menu"
-	@echo ""   1. make init       - acquire sudo (and all groups) for your local user and initialize apt with a fast mirror
-	@echo ""   2. make local       - run thalhalla playbook locally
-	@echo ""   3. make full       - run thalhalla playbook on hosts file
+	@echo ""   1. make initdebian     - acquire sudo (and all groups) for your local user and initialize apt with a fast mirror
+	@echo ""   2. make debian         - run thalhalla playbook locally on a debian machine ensure init has been ran first
+	@echo ""   3. make initarch       - acquire sudo (and all groups) for your local user and initialize pacman with a fast mirror
+	@echo ""   3. make arch           - run thalhalla playbook on arch
 
-init:
+init: initdebian
 
-init:
+thalhalla: thalhalladeb
+
+initdebian: USERNAME initsudo
+
+initsudo:
 	$(eval USERNAME := $(shell cat USERNAME))
 	$(eval TARGET := $(shell pwd))
 	@echo "This script requires root access to grant you sudo!"
@@ -19,18 +24,21 @@ init:
 	su -c "bash $(TARGET)/acquire_sudo.sh $(USERNAME)"
 	@echo "Now log out and log back in to attain sudo status"
 
+smxi:
+	sudo bash installsmxi.sh
+
 netselect:
 	sudo bash netselect.sh
 
 begin: USERNAME update
 
-play: begin dev thalhalla thoth video audio
+beginarch: USERNAME updatearch
 
-local: localbootstrap play
+debian: localbootstrap begin thalhalladeb dev thoth videodeb audiodeb  smxi
 
-full: bootstrap play
+arch: localbootstraparch beginarch thalhallaarch dev azagthoth videoarch audioarch
 
-dev: zsh spf13 nodejs ruby
+dev: spf13 nodejs ruby zsh
 
 test: builddocker rundocker
 
@@ -63,20 +71,26 @@ ruby:
 zsh:
 	ansible-playbook -i hosts  zsh.yml
 
-video:
-	ansible-playbook -i hosts  video.yml
+zsharch:
+	ansible-playbook -i hosts  zsharch.yml
 
-audio:
-	ansible-playbook -i hosts  audio.yml
+videodeb:
+	ansible-playbook -i hosts  videodeb.yml
+
+audiodeb:
+	ansible-playbook -i hosts  audiodeb.yml
 
 spf13:
 	ansible-playbook -i hosts  spf13.yml
 
-thalhalla:
-	ansible-playbook -i hosts  `cat NAME`.yml
+thalhalladeb:
+	ansible-playbook -i hosts  thalhalladeb.yml
 
 thoth:
 	ansible-playbook -i hosts  thoth.yml
+
+azagthoth:
+	ansible-playbook -i hosts  azagthoth.yml
 
 prep: build localbootstrap
 
