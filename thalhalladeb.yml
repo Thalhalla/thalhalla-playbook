@@ -115,3 +115,6 @@
     - xcompmgr
     - lxrandr
     - pepperflashplugin-nonfree
+    - alsamixergui
+    - pavucontrol
+    - pavumeter
