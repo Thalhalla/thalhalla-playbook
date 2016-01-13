@@ -15,6 +15,7 @@
     become: True
     apt:  name={{ item  }} state=latest
     with_items:
+    - nodejs
     - zsh
     - vim-athena
     - git
@@ -66,8 +67,6 @@
     - pidgin-otr
     - xbindkeys
     - xscreensaver-screensaver-dizzy
-    - kscreensaver
-    - kscreensaver-xsavers
     - rss-glx
     - unicode-screensaver
     - terminator
@@ -98,7 +97,6 @@
     - libvirt-bin
     - virt-manager
     - xclip
-    - klipper
     - shellcheck
     - lolcat
     - xcowsay
@@ -118,3 +116,9 @@
     - alsamixergui
     - pavucontrol
     - pavumeter
+    - ffmpeg
+    - glipper
+
+#    - klipper
+#    - kscreensaver
+#    - kscreensaver-xsavers

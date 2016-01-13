@@ -14,37 +14,17 @@ thalhalla: thalhalladeb
 
 initdebian: USERNAME initsudo
 
-initsudo:
-	$(eval USERNAME := $(shell cat USERNAME))
-	$(eval TARGET := $(shell pwd))
-	@echo "This script requires root access to grant you sudo!"
-	@sleep 1
-	@echo "$(USERNAME)"
-	@echo "$(TARGET)"
-	su -c "bash $(TARGET)/acquire_sudo.sh $(USERNAME)"
-	@echo "Now log out and log back in to attain sudo status"
+debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb  smxi
 
-smxi:
-	sudo bash installsmxi.sh
+arch: localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch
 
-netselect:
-	sudo bash netselect.sh
-
-begin: USERNAME update
-
-beginarch: USERNAME updatearch
-
-debian: localbootstrap begin thalhalladeb dev thoth videodeb audiodeb  smxi
-
-arch: localbootstraparch beginarch thalhallaarch dev azagthoth videoarch audioarch
-
-dev: spf13 nodejs ruby zsh
+dev: spf13 zsh
 
 test: builddocker rundocker
 
 bundle:
 	-@rm Gemfile.lock
-	bundle install
+	install
 
 builddocker:
 	/usr/bin/time -v docker build -t thalhalla-test .
@@ -62,17 +42,21 @@ rundocker:
 update:
 	ansible-playbook -i hosts  update.yml
 
+updatearch:
+	sudo pacman -Syu --noconfirm
+
 nodejs:
 	ansible-playbook -i hosts  nodejs.yml
 
 ruby:
 	ansible-playbook -i hosts  ruby.yml
 
+rubyarch:
+	bash installrvm.sh
+	bash gemInstaller.sh
+
 zsh:
 	ansible-playbook -i hosts  zsh.yml
-
-zsharch:
-	ansible-playbook -i hosts  zsharch.yml
 
 videodeb:
 	ansible-playbook -i hosts  videodeb.yml
@@ -80,8 +64,17 @@ videodeb:
 audiodeb:
 	ansible-playbook -i hosts  audiodeb.yml
 
+videoarch:
+	ansible-playbook -i hosts  videoarch.yml
+
+audioarch:
+	ansible-playbook -i hosts  audioarch.yml
+
 spf13:
 	ansible-playbook -i hosts  spf13.yml
+
+thalhallaarch:
+	ansible-playbook -i hosts  thalhallaarch.yml
 
 thalhalladeb:
 	ansible-playbook -i hosts  thalhalladeb.yml
@@ -101,6 +94,10 @@ build:
 bootstrap:
 	ansible-playbook -i hosts  bootstrapAnsible.yml
 
+localbootstraparch:
+	sudo pacman -S --noconfirm ansible
+	date -I>localbootstraparch
+
 localbootstrap:
 	sudo bash bootstrapansible.sh
 	bash installansible.sh
@@ -118,3 +115,41 @@ USERNAME:
 
 clean:
 	-rm localbootstrap
+
+initsudo:
+	$(eval USERNAME := $(shell cat USERNAME))
+	$(eval TARGET := $(shell pwd))
+	@echo "This script requires root access to grant you sudo!"
+	@sleep 1
+	@echo "$(USERNAME)"
+	@echo "$(TARGET)"
+	su -c "bash  debinstall_sudo.sh; bash $(TARGET)/acquire_sudo.sh $(USERNAME)"
+	@echo "Now log out and log back in to attain sudo status"
+
+initarch: USERNAME initsudoarch
+
+initsudoarch:
+	$(eval USERNAME := $(shell cat USERNAME))
+	$(eval TARGET := $(shell pwd))
+	@echo "This script requires root access to grant you sudo!"
+	@sleep 1
+	@echo "$(USERNAME)"
+	@echo "$(TARGET)"
+	su -c "bash  $(TARGET)/archinstall_sudo.sh; bash $(TARGET)/acquire_sudo.sh $(USERNAME)"
+	@echo "Now log out and log back in to attain sudo status"
+
+smxi:
+	sudo bash installsmxi.sh
+
+netselect:
+	sudo bash netselect.sh
+
+begin: USERNAME update
+
+beginarch: USERNAME updatearch yaourt
+
+yaourt:
+	sudo cp pacman.conf /etc/
+	sudo cp yaourtrc /etc/
+	sudo pacman -Sy --noconfirm yaourt
+	yaourt -S aurvote

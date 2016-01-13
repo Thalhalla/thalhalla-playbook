@@ -11,14 +11,8 @@ curl https://raw.githubusercontent.com/joshuacox/vv/master/bootstrapvv.sh |sudo 
 curl https://raw.githubusercontent.com/joshuacox/roustabout/master/bootstraproustabout.sh |sudo bash
 # bomsaway
 curl https://raw.githubusercontent.com/joshuacox/bomsaway/master/bootstrapbomsaway.sh |sudo bash
-# Docker
-curl https://raw.githubusercontent.com/joshuacox/roustabout/master/DebianInstall |sudo bash
 # local-base
 curl https://raw.githubusercontent.com/joshuacox/local-base/master/bootstrapbase.sh |sudo bash
-# ack rename
-sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
-# sysdig
-curl -s https://s3.amazonaws.com/download.draios.com/stable/install-sysdig | sudo bash
 
 # Freezing Cyril
 cd ~/git

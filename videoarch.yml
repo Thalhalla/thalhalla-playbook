@@ -13,13 +13,11 @@
 
   - name: Installing blender, gimp, inkcsape, etc.
     become: True
-    apt:  name={{ item  }} state=latest
+    pacman:  name={{ item  }} state=latest
     with_items:
-    - zsh
     - blender
     - inkscape
     - gimp
     - xsane
     - hugin
-    - hugin-tools
     - kdenlive

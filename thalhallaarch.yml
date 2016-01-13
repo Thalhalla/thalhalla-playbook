@@ -1,0 +1,157 @@
+# Ansible playbook for thalhalla
+#
+# Author: Josh Cox <josh 'at' webhosting coop>
+---
+
+- name: Bootstrapping developer environment
+  hosts: thalhalla
+  vars:
+    NAME_contents: "{{ lookup('file', 'NAME') }}"
+    USERNAME_contents: "{{ lookup('file', 'USERNAME') }}"
+
+  tasks:
+
+  - name: Installing zsh, vim, git, tmux, etc.
+    become: True
+    pacman:  name={{ item  }} state=latest
+    with_items:
+    - nodejs
+    - zsh
+    - git
+    - kdiff3
+    - htop
+    - curl
+    - wget
+    - keychain
+    - awesome
+    - vicious
+    - base-devel
+    - synergy
+    - ctags
+    - nload
+    - iftop
+    - iptraf-ng
+    - nethogs
+    - bmon
+    - vnstat
+    - bwm-ng
+    - dstat
+    - nmap
+    - sshfs
+    - net-tools
+    - dnsutils
+    - tilda
+    - chromium
+    - firefox 
+    - thunderbird 
+    - lynx
+    - links
+    - w3m
+    - mutt
+    - tree
+    - x11-ssh-askpass
+    - finch
+    - pidgin
+    - pidgin-otr
+    - guifications
+    - pidgin-encryption
+    - pidgin-gfire
+    - pidgin-hotkeys
+    - pidgin-kwallet
+    - pidgin-libnotify
+    - pidgin-lwqq
+    - pidgin-otr
+    - pidgin-sipe
+    - pidgin-talkfilters
+    - pidgin-toobars
+    - pidgin-xmpp-receipts
+    - xbindkeys
+    - xscreensaver-arch-logo
+    - rss-glx
+    - terminator
+    - yakuake
+    - vorbis-tools
+    - readline
+    - zlib
+    - openssl
+    - tls
+    - libyaml
+    - sqlite
+    - autoconf
+    - gdbm
+    - ncurses
+    - automake
+    - libtool
+    - bison
+    - libffi
+    - qemu
+    - libvirt
+    - virt-manager
+    - xclip
+    - shellcheck
+    - lolcat
+    - cowsay
+    - ponysay
+    - fortune-mod
+    - irssi
+    - xcompmgr
+    - lxrandr
+    - flashplugin
+    - pavucontrol
+    - ffmpeg
+    - ack
+    - font-bh-ttf
+    - noto-fonts
+    - sdl2_ttf
+    - sdl_ttf
+    - ttf-arphic-ukai
+    - ttf-arphic-uming
+    - ttf-baekmuk
+    - ttf-bitstream-vera
+    - ttf-cheapskate
+    - ttf-croscore
+    - ttf-dejavu
+    - ttf-freebanglafont
+    - ttf-freefont
+    - ttf-hannom
+    - ttf-indic-otf
+    - ttf-junicode
+    - ttf-khmer
+    - ttf-linux-libertine
+    - ttf-mph-2b-damase
+    - ttf-oxygen
+    - ttf-sazanami
+    - ttf-tibetan-machine
+    - ttf-tlwg
+    - ttf-ubraille
+    - mftrace
+    - opendesktop-fonts
+    - ttf-anonymous-pro
+    - ttf-droid
+    - ttf-fira-mono
+    - ttf-fira-sans
+    - ttf-gentium
+    - ttf-hack
+    - ttf-hanazono
+    - ttf-inconsolata
+    - ttf-ionicons
+    - ttf-liberation
+    - ttf-linux-libertine-g
+    - ttf-symbola
+    - ttf-ubuntu-font-family
+    - gdm
+    - slim
+    - slim-themes
+    - archlinux-themes-slim
+  - script: yaourtExtras.sh
+
+    #- slurm
+    #- tcptrack
+    #- cbm
+    #- speedometer
+    #- netdiag
+    #- ifstat
+    #- collectl
+#    - klipper
+#    - kscreensaver
+#    - kscreensaver-xsavers

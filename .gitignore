@@ -2,5 +2,6 @@ USERNAME
 hosts
 Gemfile.lock
 localbootstrap
+localbootstraparch
 npm-debug.log
 cid

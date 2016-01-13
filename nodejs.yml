@@ -7,10 +7,7 @@
   hosts: thalhalla
 
   tasks:
-  -  script: nodelatest.sh
+  - script: nodelatest.sh
   - name: Installing nodejs-devl
     become: True
-    apt:  name={{ item  }} state=latest
-    with_items:
-    - nodejs
-  -  script: npmModInstaller.sh
+  - script: npmModInstaller.sh
