@@ -144,6 +144,7 @@
     - slim-themes
     - archlinux-themes-slim
     - qiv
+    - go
   - script: yaourtExtras.sh
 
     #- slurm

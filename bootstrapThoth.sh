@@ -72,5 +72,9 @@ add_line_to_bash_profile()
 check_if_line_exists_zshrc || add_line_to_zshrc
 check_if_line_exists_bash_profile || add_line_to_bash_profile
 
+LINE_TO_ADD='export GOPATH=~/.golang'
+check_if_line_exists_zshrc || add_line_to_zshrc
+check_if_line_exists_bash_profile || add_line_to_bash_profile
+
 cd /tmp
 rm -Rf $TMP_DIR

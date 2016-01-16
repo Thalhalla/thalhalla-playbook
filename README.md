@@ -34,11 +34,30 @@ make debian
 
 ### Docs
 
+#### Keychain
+
+[Keychain](http://www.funtoo.org/Keychain) is executed at login by either `.zshrc` or `.bash_profile`
+
+#### Vim
+
 [SPF13](http://vim.spf13.com/) is the ultimate Distribution of VIM read more on their [site](http://vim.spf13.com/)
+
+#### Zsh
 
 [ZSH](http://zsh.sourceforge.net/Intro/) is still a bourne shell derivative, I still write all my scripts in bash, but interactively I greatly prefer ZSH
 try `cd /u/s/d/pass` and then hit `TAB` and watch that expand to `cd /usr/share/doc/passwd` and you may begin to see why I like zsh
 
+#### Go 
+
+Go is installed and ~/.golang is set as GOPATH
+
+#### Ruby
+
+Ruby 2.1 is installed via rvm and then bundler is installed to take care of the Gemfile within which all gems will be installed
+
+#### Nodejs
+
+yeoman is intalled through npm along with a few other goodies
 
 ###### Historical
 
