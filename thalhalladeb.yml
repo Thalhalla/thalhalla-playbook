@@ -118,6 +118,7 @@
     - pavumeter
     - ffmpeg
     - glipper
+    - golang-go
 
 #    - klipper
 #    - kscreensaver
