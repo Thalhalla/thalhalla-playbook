@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# libvirt
+sudo cp -i 49-org.libvirt.unix.manager.rules /etc/polkit-1/localauthority.conf.d/
+
+
 TMP_DIR=$(mktemp -d --suffix='.thoth')
 cd $TMP_DIR
 
