@@ -39,7 +39,7 @@ make
 
 cd $TMP_DIR
 
-LINE_TO_ADD='eval `keychain --eval id_rsa id_dsa id_ecdsa`'
+LINE_TO_ADD='eval `keychain --agents "gpg,ssh" --dir ~/.ssh/keychain --eval id_rsa id_dsa id_ecdsa 4157F971`'
 ZSHRC_LOCATION=~/.zshrc
 BASH_PROFILE_LOCATION=~/.bash_profile
 
