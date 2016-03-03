@@ -2,6 +2,12 @@
 
 On a debian machine, have Ansible Install Zsh, Oh-my-zsh Ultimate vim distro (spf13), synergy, git, kdiff3, exuberant-ctags, and more
 
+WARNING: this is a total mess its like ellis island except for forlorn shellscripts that setup an env
+
+I need to clean it up, but instead I keep bolting on more!
+
+If you find things broken please open an issue in the queue
+
 ## Usage
 
 ##### cheat sheet curl method
@@ -31,6 +37,24 @@ Then you can use the debian recipe:
 ```
 make debian
 ```
+
+### ArchLinux
+
+There is support for ArchLinux in here, but it is experimental of note
+
+```
+make initarch
+```
+
+```
+make arch
+```
+
+should get you equivalent packages to the debian side of things YMMV
+
+### Video and Audio
+
+there are a few recipes for video and audio that can be incanted on their own, they are included in the overall debian and arch recipes though
 
 ### Docs
 
