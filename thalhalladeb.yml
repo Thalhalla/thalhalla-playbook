@@ -126,6 +126,7 @@
     - python3-pip
     - cpufrequtils
     - thermald
+    - sysfsutils
 
 #    - klipper
 #    - kscreensaver
