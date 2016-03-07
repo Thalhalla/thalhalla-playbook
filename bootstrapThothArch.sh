@@ -19,6 +19,7 @@ curl https://raw.githubusercontent.com/joshuacox/bomsaway/master/bootstrapbomsaw
 curl https://raw.githubusercontent.com/joshuacox/local-base/master/bootstrapbase.sh |sudo bash
 
 # Freezing Cyril
+mkdir -p ~/git
 cd ~/git
 git clone https://github.com/joshuacox/freezing-cyril.git
 cd freezing-cyril

@@ -25,6 +25,7 @@ sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
 curl -s https://s3.amazonaws.com/download.draios.com/stable/install-sysdig | sudo bash
 
 # Freezing Cyril
+mkdir -p ~/git
 cd ~/git
 git clone https://github.com/joshuacox/freezing-cyril.git
 cd freezing-cyril
