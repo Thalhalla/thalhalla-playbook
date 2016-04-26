@@ -149,6 +149,7 @@
     - hdparm
     - ktorrent
     - pv
+    - time
   - script: yaourtExtras.sh
 
     #- slurm
