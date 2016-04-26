@@ -145,6 +145,10 @@
     - archlinux-themes-slim
     - qiv
     - go
+    - gmpc
+    - hdparm
+    - ktorrent
+    - pv
   - script: yaourtExtras.sh
 
     #- slurm

@@ -5,3 +5,4 @@ localbootstrap
 localbootstraparch
 npm-debug.log
 cid
+*.retry
