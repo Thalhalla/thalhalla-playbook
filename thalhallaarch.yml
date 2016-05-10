@@ -150,6 +150,7 @@
     - ktorrent
     - pv
     - time
+    - vlc
   - script: yaourtExtras.sh
 
     #- slurm
