@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 all: help
 
 help:
@@ -14,7 +15,7 @@ thalhalla: thalhalladeb
 
 initdebian: USERNAME initsudo
 
-debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb  smxi
+debian: hosts localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb  smxi
 
 arch: localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch
 
@@ -40,15 +41,18 @@ rundocker:
 	-t thalhalla-test
 
 update:
+	source ~/git/ansible/hacking/env-setup
 	ansible-playbook -i hosts  update.yml
 
 updatearch:
 	sudo pacman -Syu --noconfirm
 
 nodejs:
+	source ~/git/ansible/hacking/env-setup
 	ansible-playbook -i hosts  nodejs.yml
 
 ruby:
+	source ~/git/ansible/hacking/env-setup
 	ansible-playbook -i hosts  ruby.yml
 
 rubyarch:
@@ -109,8 +113,8 @@ NAME:
 	done ;
 
 USERNAME:
-	@while [ -z "$$USERNAME" ]; do \
-		read -r -p "Enter the name you wish to associate with this container [USERNAME]: " USERNAME; echo "$$USERNAME">>USERNAME; cat USERNAME; \
+	@while [ -z "$$USERNAME23" ]; do \
+		read -r -p "Enter the username you wish to associate with this run [USERNAME]: " USERNAME23; echo "$$USERNAME23">>USERNAME; cat USERNAME; \
 	done ;
 
 clean:
@@ -153,3 +157,6 @@ yaourt:
 	sudo cp yaourtrc /etc/
 	sudo pacman -Sy --noconfirm yaourt
 	yaourt -S aurvote
+
+hosts:
+	cp hosts.example hosts

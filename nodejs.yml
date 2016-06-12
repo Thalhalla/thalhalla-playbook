@@ -4,10 +4,11 @@
 ---
 
 - name: nodejs install
+  become: True
   hosts: thalhalla
 
   tasks:
-  - script: nodelatest.sh
+  - name: Installing latest nodejs
+    script: nodelatest.sh
   - name: Installing nodejs-devl
-    become: True
-  - script: npmModInstaller.sh
+    script: npmModInstaller.sh

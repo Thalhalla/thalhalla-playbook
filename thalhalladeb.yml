@@ -94,7 +94,7 @@
     - bison
     - libffi-dev
     - qemu-kvm
-    - libvirt-bin
+    - libvirt-clients 
     - virt-manager
     - xclip
     - shellcheck
