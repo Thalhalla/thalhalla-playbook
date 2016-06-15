@@ -96,6 +96,7 @@
     - qemu-kvm
     - libvirt-clients 
     - virt-manager
+    - pinentry-curses
     - xclip
     - shellcheck
     - lolcat
