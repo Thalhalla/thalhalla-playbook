@@ -97,6 +97,8 @@
     - libvirt-clients 
     - virt-manager
     - pinentry-curses
+    - sysfsutils
+    - time
     - xclip
     - shellcheck
     - lolcat
