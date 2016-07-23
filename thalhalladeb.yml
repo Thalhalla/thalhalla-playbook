@@ -99,6 +99,7 @@
     - pinentry-curses
     - sysfsutils
     - time
+    - parallel
     - xclip
     - shellcheck
     - lolcat
