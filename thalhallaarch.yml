@@ -16,6 +16,7 @@
     pacman:  name={{ item  }} state=latest
     with_items:
     - nodejs
+    - ruby
     - zsh
     - git
     - kdiff3
