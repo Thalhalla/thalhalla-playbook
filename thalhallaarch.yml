@@ -17,6 +17,8 @@
     with_items:
     - nodejs
     - docker
+    - docker-compose
+    - docker-machine
     - zsh
     - git
     - kdiff3
