@@ -16,6 +16,8 @@
     pacman:  name={{ item  }} state=latest
     with_items:
     - nodejs
+    - base-devel
+    - linux-headers
     - ruby
     - zsh
     - git
