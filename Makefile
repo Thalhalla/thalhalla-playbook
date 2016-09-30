@@ -24,7 +24,7 @@ test: builddocker rundocker
 
 bundle:
 	-@rm Gemfile.lock
-	install
+	bundle install
 
 builddocker:
 	/usr/bin/time -v docker build -t thalhalla-test .

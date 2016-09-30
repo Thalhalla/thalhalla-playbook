@@ -17,6 +17,7 @@
     with_items:
     - nodejs
     - base-devel
+    - cpupower
     - linux-headers
     - ruby
     - zsh
