@@ -18,7 +18,7 @@ debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb 
 
 arch: MYID localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm
 
-dev: spf13 zsh
+dev: janus zsh
 
 test: builddocker rundocker
 
@@ -77,6 +77,9 @@ audioarch:
 
 spf13:
 	ansible-playbook -i hosts  spf13.yml
+
+janus:
+	curl -L https://bit.ly/janus-bootstrap | bash
 
 thalhallaarch:
 	ansible-playbook -i hosts  thalhallaarch.yml
