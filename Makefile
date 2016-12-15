@@ -12,11 +12,11 @@ init: initdebian
 
 thalhalla: thalhalladeb
 
-initdebian: USERNAME initsudo
+initdebian: MYID initsudo
 
 debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb  smxi
 
-arch: localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch
+arch: MYID localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm
 
 dev: spf13 zsh
 
@@ -28,6 +28,11 @@ bundle:
 
 builddocker:
 	/usr/bin/time -v docker build -t thalhalla-test .
+
+nvm:
+	bash  ./nvm.sh
+	echo "nvm install lts/boron"
+	echo "nvm alias default lts/boron"
 
 rundocker:
 	$(eval TMP := $(shell mktemp -d --suffix=ThalhallaDOCKERTMP))
@@ -108,34 +113,34 @@ NAME:
 		read -r -p "Enter the name you wish to associate with this container [NAME]: " NAME; echo "$$NAME">>NAME; cat NAME; \
 	done ;
 
-USERNAME:
-	@while [ -z "$$USERNAME" ]; do \
-		read -r -p "Enter the name you wish to associate with this container [USERNAME]: " USERNAME; echo "$$USERNAME">>USERNAME; cat USERNAME; \
+MYID:
+	@while [ -z "$$MYID" ]; do \
+		read -r -p "Enter the MYID directory you wish to associate with this new backup [MYID]: " MYID; echo "$$MYID">MYID; cat MYID; \
 	done ;
 
 clean:
 	-rm localbootstrap
 
 initsudo:
-	$(eval USERNAME := $(shell cat USERNAME))
+	$(eval MYID := $(shell cat MYID))
 	$(eval TARGET := $(shell pwd))
 	@echo "This script requires root access to grant you sudo!"
 	@sleep 1
-	@echo "$(USERNAME)"
+	@echo "$(MYID)"
 	@echo "$(TARGET)"
-	su -c "bash  debinstall_sudo.sh; bash $(TARGET)/acquire_sudo.sh $(USERNAME)"
+	su -c "bash  debinstall_sudo.sh; bash $(TARGET)/acquire_sudo.sh $(MYID)"
 	@echo "Now log out and log back in to attain sudo status"
 
-initarch: USERNAME initsudoarch
+initarch: MYID initsudoarch
 
 initsudoarch:
-	$(eval USERNAME := $(shell cat USERNAME))
+	$(eval MYID := $(shell cat MYID))
 	$(eval TARGET := $(shell pwd))
 	@echo "This script requires root access to grant you sudo!"
 	@sleep 1
-	@echo "$(USERNAME)"
+	@echo "$(MYID)"
 	@echo "$(TARGET)"
-	su -c "bash  $(TARGET)/archinstall_sudo.sh; bash $(TARGET)/acquire_sudo.sh $(USERNAME)"
+	su -c "bash  $(TARGET)/archinstall_sudo.sh; bash $(TARGET)/acquire_sudo.sh $(MYID)"
 	@echo "Now log out and log back in to attain sudo status"
 
 smxi:
@@ -144,9 +149,9 @@ smxi:
 netselect:
 	sudo bash netselect.sh
 
-begin: USERNAME update
+begin: MYID update
 
-beginarch: USERNAME updatearch yaourt
+beginarch: MYID updatearch yaourt
 
 yaourt:
 	sudo cp pacman.conf /etc/

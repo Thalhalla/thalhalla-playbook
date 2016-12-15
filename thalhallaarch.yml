@@ -16,7 +16,6 @@
     pacman:  name={{ item  }} state=latest
     with_items:
     - nodejs
-    - base-devel
     - cpupower
     - linux-headers
     - ruby
@@ -29,7 +28,7 @@
     - keychain
     - awesome
     - vicious
-    - base-devel
+    - gcc-multilib 
     - synergy
     - ctags
     - nload
@@ -59,12 +58,10 @@
     - pidgin-otr
     - guifications
     - pidgin-encryption
-    - pidgin-gfire
     - pidgin-hotkeys
     - pidgin-kwallet
     - pidgin-libnotify
     - pidgin-lwqq
-    - pidgin-otr
     - pidgin-sipe
     - pidgin-talkfilters
     - pidgin-toobars
@@ -123,7 +120,6 @@
     - ttf-khmer
     - ttf-linux-libertine
     - ttf-mph-2b-damase
-    - ttf-oxygen
     - ttf-sazanami
     - ttf-tibetan-machine
     - ttf-tlwg
