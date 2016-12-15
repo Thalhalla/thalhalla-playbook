@@ -82,6 +82,8 @@ janus:
 	curl -L https://bit.ly/janus-bootstrap | bash
 	cp -i vimrc.before ~/.vimrc.before
 	cp -i vimrc.after ~/.vimrc.after
+	echo 'Janus Documentation |==> https://github.com/carlhuda/janus <==|'
+	sleep 1
 
 thalhallaarch:
 	ansible-playbook -i hosts  thalhallaarch.yml
