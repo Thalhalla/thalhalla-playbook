@@ -80,6 +80,8 @@ spf13:
 
 janus:
 	curl -L https://bit.ly/janus-bootstrap | bash
+	cp -i vimrc.before ~/.vimrc.before
+	cp -i vimrc.after ~/.vimrc.after
 
 thalhallaarch:
 	ansible-playbook -i hosts  thalhallaarch.yml
