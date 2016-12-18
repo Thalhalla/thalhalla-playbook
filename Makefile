@@ -14,9 +14,9 @@ thalhalla: thalhalladeb
 
 initdebian: MYID initsudo
 
-debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb  smxi
+debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb rclone smxi
 
-arch: MYID localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm
+arch: MYID localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm rclone
 
 dev: janus zsh
 
@@ -165,3 +165,17 @@ yaourt:
 	sudo cp yaourtrc /etc/
 	sudo pacman -Sy --noconfirm yaourt
 	yaourt -S aurvote
+
+rclone:
+	$(eval TMP := $(shell mktemp -d --suffix=ThalhallaDOCKERTMP))
+	chmod 777 $(TMP)
+	cd $(TMP) ;\
+	curl -O http://downloads.rclone.org/rclone-current-linux-amd64.zip ;\
+	unzip rclone-current-linux-amd64.zip ;\
+	sudo cp rclone-*/rclone /usr/local/bin/ ;\
+	sudo chown root:root /usr/local/bin/rclone ;\
+	sudo chmod 755 /usr/local/bin/rclone ;\
+	sudo mkdir -p /usr/local/share/man/man1 ;\
+	sudo cp rclone-*/rclone.1 /usr/local/share/man/man1/
+	sudo mandb
+	@echo "rclone config <--- to configure RCLONE"
