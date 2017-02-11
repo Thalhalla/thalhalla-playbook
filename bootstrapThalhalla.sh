@@ -8,6 +8,6 @@ git clone https://github.com/thalhalla/thalhalla-playbook.git
 cd thalhalla-playbook
 echo `whoami`>USERNAME
 cp hosts.example hosts
-make local
+make `lsb_release -cs`
 cd
 sudo rm -Rf $TMP_DIR

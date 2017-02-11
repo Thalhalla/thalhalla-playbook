@@ -20,7 +20,11 @@ arch: MYID localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bun
 
 dev: janus zsh
 
-test: builddocker rundocker
+test: rm testxenial
+
+testjessie: buildjessie rundocker
+
+testxenial: buildxenial rundocker
 
 xenial: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb rclone tmuxinator
 
@@ -28,7 +32,7 @@ bundle:
 	-@rm Gemfile.lock
 	bundle install
 
-builddocker:
+buildjessie:
 	-@cp Dockerfile.jessie Dockerfile
 	/usr/bin/time -v docker build -t thalhalla-test .
 	-@rm Dockerfile
@@ -196,3 +200,18 @@ tmuxinator:
 	wget -cq https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash && \
 	wget -cq https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh && \
 	wget -cq https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.fish
+
+kill:
+	-@docker kill `cat cid`
+
+rm-image:
+	-@docker rm `cat cid`
+	-@rm cid
+
+rm: kill rm-image
+
+enter:
+	docker exec -i -t `cat cid` /bin/bash
+
+logs:
+	docker logs -f `cat cid`
