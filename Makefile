@@ -16,18 +16,27 @@ initdebian: MYID initsudo
 
 debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb rclone smxi
 
-arch: MYID localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm rclone
+arch: MYID localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm rclone tmuxinator
 
 dev: janus zsh
 
 test: builddocker rundocker
+
+xenial: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb rclone tmuxinator
 
 bundle:
 	-@rm Gemfile.lock
 	bundle install
 
 builddocker:
+	-@cp Dockerfile.jessie Dockerfile
 	/usr/bin/time -v docker build -t thalhalla-test .
+	-@rm Dockerfile
+
+buildxenial:
+	-@cp Dockerfile.xenial Dockerfile
+	/usr/bin/time -v docker build -t thalhalla-test .
+	-@rm Dockerfile
 
 nvm:
 	bash  ./nvm.sh
