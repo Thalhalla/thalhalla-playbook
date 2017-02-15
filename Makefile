@@ -26,7 +26,11 @@ testjessie: buildjessie rundocker
 
 testxenial: buildxenial rundocker
 
+testyakkety: buildyakkety rundocker
+
 xenial: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb rclone tmuxinator
+
+yakkety: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb rclone tmuxinator
 
 bundle:
 	-@rm Gemfile.lock
@@ -38,9 +42,14 @@ buildjessie:
 	-@rm Dockerfile
 
 buildxenial:
-	-@cp Dockerfile.xenial Dockerfile
+	cp Dockerfile.xenial Dockerfile
 	/usr/bin/time -v docker build -t thalhalla-test .
-	-@rm Dockerfile
+	rm Dockerfile
+
+buildyakkety:
+	cp Dockerfile.yakkety Dockerfile
+	/usr/bin/time -v docker build -t thalhalla-test .
+	rm Dockerfile
 
 nvm:
 	bash  ./nvm.sh

@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:yakkety
 MAINTAINER Josh Cox <josh 'at' webhosting.coop>
 
 ENV DEBIAN_FRONTEND noninteractive
