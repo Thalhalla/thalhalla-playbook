@@ -13,4 +13,5 @@
   - name: Changing the default shell to zsh
     become: True
     user:  shell=/bin/zsh name={{ USERNAME_contents }}
-  - script: bootstrapThoth.sh
+  - name: bootstrap Thoth 
+    script: bootstrapThoth.sh

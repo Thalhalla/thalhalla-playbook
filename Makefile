@@ -32,7 +32,7 @@ testyakkety: buildyakkety rundocker
 
 xenial: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle rclone tmuxinator
 
-yakkety: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle rclone tmuxinator
+yakkety: localbootstrap begin thalhallayakkety nodejs thoth dev ruby bundle rclone tmuxinator
 
 studio: videodeb audiodeb
 
@@ -116,6 +116,9 @@ thalhallaarch:
 
 thalhalladeb:
 	ansible-playbook -i hosts  thalhalladeb.yml
+
+thalhallayakkety:
+	ansible-playbook -i hosts  thalhallayakkety.yml
 
 thoth:
 	ansible-playbook -i hosts  thoth.yml
@@ -228,3 +231,6 @@ enter:
 
 logs:
 	docker logs -f `cat cid`
+
+USERNAME:
+	whoami > USERNAME

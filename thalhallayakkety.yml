@@ -1,0 +1,132 @@
+# Ansible playbook for thalhalla
+#
+# Author: Josh Cox <josh 'at' webhosting coop>
+---
+
+- name: Bootstrapping developer environment
+  hosts: thalhalla
+  vars:
+    NAME_contents: "{{ lookup('file', 'NAME') }}"
+    USERNAME_contents: "{{ lookup('file', 'USERNAME') }}"
+
+  tasks:
+
+  - name: Installing zsh, vim, git, tmux, etc.
+    become: True
+    apt:  name={{ item  }} state=latest
+    with_items:
+    - nodejs
+    - zsh
+    - vim-athena
+    - git
+    - vlc
+    - byobu
+    - kdiff3
+    - htop
+    - curl
+    - wget
+    - keychain
+    - awesome
+    - awesome-extra
+    - build-essential
+    - synergy
+    - exuberant-ctags
+    - nload
+    - iftop
+    - iptraf
+    - nethogs
+    - bmon
+    - slurm
+    - tcptrack
+    - vnstat
+    - bwm-ng
+    - cbm
+    - speedometer
+    - netdiag
+    - ifstat
+    - dstat
+    - collectl
+    - nmap
+    - sshfs
+    - ack-grep
+    - net-tools
+    - dnsutils
+    - tilda
+    - chromium-browser
+    - lynx-cur
+    - links2
+    - w3m
+    - w3m-img
+    - mutt
+    - tree
+    - ssh-askpass-gnome
+    - autokey-qt
+    - finch
+    - pidgin
+    - pidgin-otr
+    - xbindkeys
+    - xscreensaver-screensaver-dizzy
+    - rss-glx
+    - unicode-screensaver
+    - terminator
+    - yakuake
+    - wmmatrix
+    - xscreensaver
+    - xscreensaver-data
+    - xscreensaver-data-extra
+    - xscreensaver-gl
+    - xscreensaver-gl-extra
+    - xscreensaver-screensaver-bsod
+    - xscreensaver-screensaver-webcollage
+    - vorbis-tools
+    - libreadline6-dev
+    - zlib1g-dev
+    - libssl-dev
+    - libyaml-dev
+    - libsqlite3-dev
+    - sqlite3
+    - autoconf
+    - libgdbm-dev
+    - libncurses5-dev
+    - automake
+    - libtool
+    - bison
+    - libffi-dev
+    - qemu-kvm
+    - libvirt-bin
+    - virt-manager
+    - xclip
+    - shellcheck
+    - lolcat
+    - xcowsay
+    - fortune
+    - fortune-mod
+    - fortunes-off
+    - fortunes-mario
+    - fortunes-bofh-excuses
+    - fortunes-debian-hints
+    - irssi
+    - irssi-scripts
+    - irssi-plugin-otr
+    - irssi-plugin-xmpp
+    - xcompmgr
+    - lxrandr
+    - pepperflashplugin-nonfree
+    - alsamixergui
+    - pavucontrol
+    - pavumeter
+    - ffmpeg
+    - glipper
+    - qiv
+    - golang-go
+    - python-dev
+    - python3-dev
+    - python-pip
+    - python3-pip
+    - cpufrequtils
+    - thermald
+    - sysfsutils
+
+#    - klipper
+#    - kscreensaver
+#    - kscreensaver-xsavers
