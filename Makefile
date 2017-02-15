@@ -1,3 +1,5 @@
+SHELL:=/bin/bash --login
+
 all: help
 
 help:
@@ -28,9 +30,11 @@ testxenial: buildxenial rundocker
 
 testyakkety: buildyakkety rundocker
 
-xenial: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb rclone tmuxinator
+xenial: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle rclone tmuxinator
 
-yakkety: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb rclone tmuxinator
+yakkety: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle rclone tmuxinator
+
+studio: videodeb audiodeb
 
 bundle:
 	-@rm Gemfile.lock

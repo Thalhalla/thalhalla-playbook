@@ -20,7 +20,7 @@ ENV LANG en_US.UTF-8
 # RUN echo 'en_US ISO-8859-1'>>/etc/locale.gen
 
 RUN useradd -md /home/test test ; \
-mkdir /home/test; chown -R test. /home/test ; \
+mkdir -p /home/test; chown -R test. /home/test ; \
 echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers ; \
 gpasswd -a test sudo
 COPY bootstrapThalhalla.sh /home/test/bootstrapThalhalla.sh
