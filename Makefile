@@ -1,4 +1,3 @@
-SHELL:=/bin/bash --login
 
 all: help
 
@@ -63,22 +62,25 @@ nvm:
 rundocker:
 	$(eval TMP := $(shell mktemp -d --suffix=ThalhallaDOCKERTMP))
 	chmod 777 $(TMP)
-	@docker run --name=thalhalla-test \
+	docker run --name=thalhalla-test \
 	--cidfile="cid" \
 	-v $(TMP):/tmp \
 	-d \
 	--privileged \
 	-t thalhalla-test
 
+update: SHELL:=/bin/bash --login
 update:
 	ansible-playbook -i hosts  update.yml
 
 updatearch:
 	sudo pacman -Syu --noconfirm
 
+nodejs: SHELL:=/bin/bash --login
 nodejs:
 	ansible-playbook -i hosts  nodejs.yml
 
+ruby: SHELL:=/bin/bash --login
 ruby:
 	ansible-playbook -i hosts  ruby.yml
 
@@ -86,21 +88,27 @@ rubyarch:
 	bash installrvm.sh
 	bash gemInstaller.sh
 
+zsh: SHELL:=/bin/bash --login
 zsh:
 	ansible-playbook -i hosts  zsh.yml
 
+videodeb: SHELL:=/bin/bash --login
 videodeb:
 	ansible-playbook -i hosts  videodeb.yml
 
+audiodeb: SHELL:=/bin/bash --login
 audiodeb:
 	ansible-playbook -i hosts  audiodeb.yml
 
+videoarch: SHELL:=/bin/bash --login
 videoarch:
 	ansible-playbook -i hosts  videoarch.yml
 
+audioarch: SHELL:=/bin/bash --login
 audioarch:
 	ansible-playbook -i hosts  audioarch.yml
 
+spf13: SHELL:=/bin/bash --login
 spf13:
 	ansible-playbook -i hosts  spf13.yml
 
@@ -111,18 +119,23 @@ janus:
 	echo 'Janus Documentation |==> https://github.com/carlhuda/janus <==|'
 	sleep 1
 
+thalhallaarch: SHELL:=/bin/bash --login
 thalhallaarch:
 	ansible-playbook -i hosts  thalhallaarch.yml
 
+thalhalladeb: SHELL:=/bin/bash --login
 thalhalladeb:
 	ansible-playbook -i hosts  thalhalladeb.yml
 
+thalhallayakkety: SHELL:=/bin/bash --login
 thalhallayakkety:
 	ansible-playbook -i hosts  thalhallayakkety.yml
 
+thoth: SHELL:=/bin/bash --login
 thoth:
 	ansible-playbook -i hosts  thoth.yml
 
+azagthoth: SHELL:=/bin/bash --login
 azagthoth:
 	ansible-playbook -i hosts  azagthoth.yml
 
@@ -132,6 +145,7 @@ build:
 	sudo apt-get install -y ansible git build-essential aptitude
 	date -I>build
 
+bootstrap: SHELL:=/bin/bash --login
 bootstrap:
 	ansible-playbook -i hosts  bootstrapAnsible.yml
 
@@ -139,6 +153,7 @@ localbootstraparch:
 	sudo pacman -S --noconfirm ansible
 	date -I>localbootstraparch
 
+localbootstrap: SHELL:=/bin/bash --login
 localbootstrap:
 	sudo bash bootstrapansible.sh
 	bash installansible.sh

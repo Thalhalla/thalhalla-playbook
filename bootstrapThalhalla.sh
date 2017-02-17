@@ -8,6 +8,7 @@ python-pip python-dev libffi-dev libssl-dev libxml2-dev libxslt1-dev libjpeg8-de
 git clone https://github.com/thalhalla/thalhalla-playbook.git
 cd thalhalla-playbook
 echo `whoami`>USERNAME
+echo `whoami`>MYID
 cp hosts.example hosts
 echo `lsb_release -cs`
 make `lsb_release -cs`
