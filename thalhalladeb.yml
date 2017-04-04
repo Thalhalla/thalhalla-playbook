@@ -128,6 +128,8 @@
     - cpufrequtils
     - thermald
     - sysfsutils
+    - linux-tools-common
+    - linux-tools-generic
 
 #    - klipper
 #    - kscreensaver

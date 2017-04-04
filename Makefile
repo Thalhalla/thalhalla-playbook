@@ -13,11 +13,11 @@ init: initdebian
 
 thalhalla: thalhalladeb
 
-initdebian: MYID initsudo
+initdebian: USERNAME initsudo
 
 debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb rclone smxi
 
-arch: MYID localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm rclone tmuxinator
+arch: USERNAME localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm rclone tmuxinator
 
 dev: janus zsh
 
@@ -164,34 +164,29 @@ NAME:
 		read -r -p "Enter the name you wish to associate with this container [NAME]: " NAME; echo "$$NAME">>NAME; cat NAME; \
 	done ;
 
-MYID:
-	@while [ -z "$$MYID" ]; do \
-		read -r -p "Enter the MYID directory you wish to associate with this new backup [MYID]: " MYID; echo "$$MYID">MYID; cat MYID; \
-	done ;
-
 clean:
 	-rm localbootstrap
 
 initsudo:
-	$(eval MYID := $(shell cat MYID))
+	$(eval USERNAME := $(shell cat USERNAME))
 	$(eval TARGET := $(shell pwd))
 	@echo "This script requires root access to grant you sudo!"
 	@sleep 1
-	@echo "$(MYID)"
+	@echo "$(USERNAME)"
 	@echo "$(TARGET)"
-	su -c "bash  debinstall_sudo.sh; bash $(TARGET)/acquire_sudo.sh $(MYID)"
+	su -c "bash  debinstall_sudo.sh; bash $(TARGET)/acquire_sudo.sh $(USERNAME)"
 	@echo "Now log out and log back in to attain sudo status"
 
-initarch: MYID initsudoarch
+initarch: USERNAME initsudoarch
 
 initsudoarch:
-	$(eval MYID := $(shell cat MYID))
+	$(eval USERNAME := $(shell cat USERNAME))
 	$(eval TARGET := $(shell pwd))
 	@echo "This script requires root access to grant you sudo!"
 	@sleep 1
-	@echo "$(MYID)"
+	@echo "$(USERNAME)"
 	@echo "$(TARGET)"
-	su -c "bash  $(TARGET)/archinstall_sudo.sh; bash $(TARGET)/acquire_sudo.sh $(MYID)"
+	su -c "bash  $(TARGET)/archinstall_sudo.sh; bash $(TARGET)/acquire_sudo.sh $(USERNAME)"
 	@echo "Now log out and log back in to attain sudo status"
 
 smxi:
@@ -200,9 +195,9 @@ smxi:
 netselect:
 	sudo bash netselect.sh
 
-begin: MYID update
+begin: USERNAME update
 
-beginarch: MYID updatearch yaourt
+beginarch: USERNAME updatearch yaourt
 
 yaourt:
 	sudo cp pacman.conf /etc/
