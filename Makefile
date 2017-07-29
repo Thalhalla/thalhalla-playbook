@@ -29,7 +29,7 @@ testxenial: buildxenial rundocker
 
 testyakkety: buildyakkety rundocker
 
-xenial: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle rclone tmuxinator
+xenial: localbootstrap begin thalhallaxenial nodejs thoth dev ruby bundle rclone tmuxinator
 
 yakkety: localbootstrap begin thalhallayakkety nodejs thoth dev ruby bundle rclone tmuxinator
 
@@ -126,6 +126,10 @@ thalhallaarch:
 thalhalladeb: SHELL:=/bin/bash --login
 thalhalladeb:
 	ansible-playbook -i hosts  thalhalladeb.yml
+
+thalhallaxenial: SHELL:=/bin/bash --login
+thalhallaxenial:
+	ansible-playbook -i hosts  thalhallaxenial.yml
 
 thalhallayakkety: SHELL:=/bin/bash --login
 thalhallayakkety:
