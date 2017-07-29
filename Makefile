@@ -40,19 +40,14 @@ bundle:
 	bundle install
 
 buildjessie:
-	-@cp Dockerfile.jessie Dockerfile
-	/usr/bin/time -v docker build -t thalhalla-test .
-	-@rm Dockerfile
+	/usr/bin/time -v docker build -t thalhalla-test-jessie -f Dockerfile.jessie .
 
 buildxenial:
-	cp Dockerfile.xenial Dockerfile
-	/usr/bin/time -v docker build -t thalhalla-test .
-	rm Dockerfile
+	$(eval RELEASE := $(shell echo 'xenial'))
+	/usr/bin/time -v docker build -t thalhalla-test-${RELEASE} -f Dockerfile.${RELEASE} .
 
 buildyakkety:
-	cp Dockerfile.yakkety Dockerfile
-	/usr/bin/time -v docker build -t thalhalla-test .
-	rm Dockerfile
+	/usr/bin/time -v docker build -t thalhalla-test-yakkety -f Dockerfile.yakkety .
 
 nvm:
 	bash  ./nvm.sh

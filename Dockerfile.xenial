@@ -28,7 +28,7 @@ USER test
 WORKDIR /home/test
 ENV mybootstrap 12345
 #RUN curl https://raw.githubusercontent.com/Thalhalla/thalhalla-playbook/master/bootstrapThalhalla.sh | bash
-RUN bash bootstrapThalhalla.sh
+RUN bash bootstrapThalhalla.sh \
 sudo apt-get -y autoremove; \
 sudo apt-get clean; \
 sudo rm -rf /var/lib/apt/lists/*
