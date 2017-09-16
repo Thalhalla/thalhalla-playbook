@@ -221,7 +221,7 @@ rclone:
 	@echo "rclone config <--- to configure RCLONE"
 
 tmuxinator:
-	gem install tmuxinator
+	sudo gem install tmuxinator
 	mkdir -p ~/.bin
 	cd ~/.bin && \
 	wget -cq https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash && \
