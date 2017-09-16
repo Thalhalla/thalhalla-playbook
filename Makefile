@@ -36,7 +36,8 @@ yakkety: localbootstrap begin thalhallayakkety nodejs thoth dev ruby bundle rclo
 studio: videodeb audiodeb
 
 bundle:
-	-@rm Gemfile.lock
+	-@rm -f Gemfile.lock
+	sudo gem install bundler
 	bundle install
 
 buildjessie:
