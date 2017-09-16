@@ -210,7 +210,7 @@ rclone:
 	chmod 777 $(TMP)
 	cd $(TMP) ;\
 	curl -O \
-	https://downloads.rclone.org/rclone-current-linux-amd64.zip &&
+	https://downloads.rclone.org/rclone-current-linux-amd64.zip && \
 	unzip rclone-current-linux-amd64.zip ;\
 	sudo cp rclone-*/rclone /usr/local/bin/ ;\
 	sudo chown root:root /usr/local/bin/rclone ;\
