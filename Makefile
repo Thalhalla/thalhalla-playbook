@@ -23,15 +23,23 @@ dev: janus zsh
 
 test: rm testxenial
 
-testjessie: buildjessie rundocker
+testjessie: buildjessie 
+	RELEASE=jessie make rundocker
 
-testxenial: buildxenial rundocker
+testxenial: buildxenial 
+	RELEASE=xenial make rundocker
 
-testyakkety: buildyakkety rundocker
+testyakkety: buildyakkety 
+	RELEASE=yakkety make rundocker
+
+testzesty: buildzesty
+	RELEASE=zesty make rundocker
 
 xenial: localbootstrap begin thalhallaxenial nodejs thoth dev ruby bundle rclone tmuxinator
 
 yakkety: localbootstrap begin thalhallayakkety nodejs thoth dev ruby bundle rclone tmuxinator
+
+zesty: localbootstrap begin thalhallazesty nodejs thoth dev ruby bundle rclone tmuxinator
 
 studio: videodeb audiodeb
 
@@ -41,14 +49,19 @@ bundle:
 	bundle install
 
 buildjessie:
-	/usr/bin/time -v docker build -t thalhalla-test-jessie -f Dockerfile.jessie .
+	RELEASE=jessie make builder
 
 buildxenial:
-	$(eval RELEASE := $(shell echo 'xenial'))
-	/usr/bin/time -v docker build -t thalhalla-test-${RELEASE} -f Dockerfile.${RELEASE} .
+	RELEASE=xenial make builder
 
 buildyakkety:
-	/usr/bin/time -v docker build -t thalhalla-test-yakkety -f Dockerfile.yakkety .
+	RELEASE=yakkety make builder
+
+buildzesty:
+	RELEASE=zesty make builder
+
+builder:
+	/usr/bin/time -v docker build -t thalhalla-test-${RELEASE} -f Dockerfile.${RELEASE} .
 
 nvm:
 	bash  ./nvm.sh
@@ -63,7 +76,7 @@ rundocker:
 	-v $(TMP):/tmp \
 	-d \
 	--privileged \
-	-t thalhalla-test
+	-t thalhalla-test-${RELEASE}
 
 update: SHELL:=/bin/bash --login
 update:
