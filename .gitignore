@@ -7,4 +7,5 @@ npm-debug.log
 cid
 *.retry
 Dockerfile
+.initsudoarch
 USERNAME

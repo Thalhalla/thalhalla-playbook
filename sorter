@@ -1,4 +1,4 @@
 #!/bin/bash
 set -eux
-sort pacman_list > pacman_list.sorted
+sort pacman_list |uniq> pacman_list.sorted
 mv -v pacman_list.sorted pacman_list

@@ -2,6 +2,9 @@ ack
 awesome
 base-devel
 blender
+bluedevil
+bluez
+bluez-utils
 bmon
 bwm-ng
 byobu
@@ -48,6 +51,7 @@ linux-headers
 lolcat
 lxrandr
 lynx
+man
 mftrace
 mutt
 ncurses
@@ -59,6 +63,7 @@ nodejs
 noto-fonts
 opendesktop-fonts
 openssl
+opera
 pavucontrol
 pidgin
 pidgin-hotkeys
@@ -147,7 +152,6 @@ xcompmgr
 xsane
 yakuake
 zlib
-zsh
 zsh
 zsh-autosuggestions
 zsh-completions
