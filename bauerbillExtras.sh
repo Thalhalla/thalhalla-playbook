@@ -6,5 +6,6 @@ TMP=$(mktemp -d)
 #    byobu \
 #    autokey-py3 \
 #    cmst \
+for i in $(cat bauerbill_list); do echo "./bauerbill_installer $i"; done
 
 rm -Rf $TMP

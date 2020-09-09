@@ -130,7 +130,9 @@ janus:
 
 thalhallaarch: SHELL:=/bin/bash --login
 thalhallaarch:
-	ansible-playbook -i hosts  thalhallaarch.yml
+	$(eval TARGET_LIST := $(shell cat pacman_list | tr '\n' ' '))
+	sudo powerpill -S --noconfirm $(TARGET_LIST)
+#	ansible-playbook -i hosts  thalhallaarch.yml
 
 thalhalladeb: SHELL:=/bin/bash --login
 thalhalladeb:
