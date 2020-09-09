@@ -19,7 +19,7 @@ debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb 
 
 #deprecated-arch: USERNAME localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm rclone tmuxinator
 
-arch: USERNAME localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch nvm rclone tmuxinator
+arch: initarch localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch nvm rclone tmuxinator
 
 dev: spacevim zsh
 
@@ -200,7 +200,9 @@ initsudo:
 
 initarch: USERNAME initsudoarch
 
-initsudoarch:
+initsudoarch: .initsudoarch
+
+.initsudoarch:
 	$(eval USERNAME := $(shell cat USERNAME))
 	$(eval TARGET := $(shell pwd))
 	@echo "This script requires root access to grant you sudo!"
@@ -209,6 +211,7 @@ initsudoarch:
 	@echo "$(USERNAME)"
 	@echo "$(TARGET)"
 	su -c "bash  $(TARGET)/archinstall_sudo.sh; bash $(TARGET)/acquire_sudo.sh $(USERNAME)"
+	date -I >> .initsudoarch
 	@echo "Now log out and log back in to attain sudo status"
 
 smxi:
@@ -271,4 +274,4 @@ xyne:
 	sudo cp -a xyne-mirrorlist /etc/pacman.d/
 	sudo cp -a pacman.conf /etc/
 	sudo pacman -Sy
-	sudo pacman -S powerpill bauerbill
+	sudo pacman -S --noconfirm powerpill bauerbill
