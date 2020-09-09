@@ -1,11 +1,12 @@
 #!/bin/bash
-curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+TARGET_RUBY=2.6
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 curl -L get.rvm.io | bash -s stable
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 rvm requirements
 rvm get stable --auto-dotfiles
-rvm install 2.2
-rvm use --default 2.2
+rvm install $TARGET_RUBY
+rvm use --default $TARGET_RUBUY
 # rvm list known
 # rvm install 1.9.3                # Latest known patch level
 #rvm list         # List rubies only

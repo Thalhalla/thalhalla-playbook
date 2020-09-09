@@ -20,6 +20,8 @@ curl https://raw.githubusercontent.com/joshuacox/bomsaway/master/bootstrapbomsaw
 curl https://raw.githubusercontent.com/joshuacox/local-base/master/bootstrapbase.sh |sudo bash
 # SSShutdown
 curl -sL https://git.io/ssshutdown | bash
+# Swappy
+curl https://raw.githubusercontent.com/joshuacox/swappy/master/bootstrap | bash
 
 
 # Freezing Cyril

@@ -17,9 +17,11 @@ initdebian: USERNAME initsudo
 
 debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb rclone smxi
 
-arch: USERNAME localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm rclone tmuxinator
+#deprecated-arch: USERNAME localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm rclone tmuxinator
 
-dev: janus zsh
+arch: USERNAME localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch nvm rclone tmuxinator
+
+dev: spacevim zsh
 
 test: rm testxenial
 
@@ -65,8 +67,6 @@ builder:
 
 nvm:
 	bash  ./nvm.sh
-	echo "nvm install lts/boron"
-	echo "nvm alias default lts/boron"
 
 rundocker:
 	$(eval TMP := $(shell mktemp -d --suffix=ThalhallaDOCKERTMP))
@@ -99,7 +99,8 @@ rubyarch:
 
 zsh: SHELL:=/bin/bash --login
 zsh:
-	ansible-playbook -i hosts  zsh.yml
+	curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh|sh
+	chsh -s /usr/bin/zsh
 
 videodeb: SHELL:=/bin/bash --login
 videodeb:
@@ -120,6 +121,9 @@ audioarch:
 spf13: SHELL:=/bin/bash --login
 spf13:
 	ansible-playbook -i hosts  spf13.yml
+
+spacevim:
+	curl -sLf https://spacevim.org/install.sh | bash
 
 janus:
 	curl -L https://bit.ly/janus-bootstrap | bash
@@ -239,7 +243,6 @@ rclone:
 	@echo "rclone config <--- to configure RCLONE"
 
 tmuxinator:
-	sudo gem install tmuxinator
 	mkdir -p ~/.bin
 	cd ~/.bin && \
 	wget -cq https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash && \
