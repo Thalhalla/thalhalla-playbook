@@ -258,3 +258,9 @@ logs:
 
 USERNAME:
 	whoami > USERNAME
+
+xyne:
+	sudo cp -a xyne-mirrorlist /etc/pacman.d/
+	sudo cp -a pacman.conf /etc/
+	sudo pacman -Sy
+	sudo pacman -S powerpill bauerbill
