@@ -151,7 +151,7 @@
     - pv
     - time
     - vlc
-  - script: yaourtExtras.sh
+  - script: bauerbillExtras.sh
 
     #- slurm
     #- tcptrack

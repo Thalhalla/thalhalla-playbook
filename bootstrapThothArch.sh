@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # libvirt
-sudo cp -i 49-org.libvirt.unix.manager.rules /etc/polkit-1/rules.d/
+#sudo cp -i 49-org.libvirt.unix.manager.rules /etc/polkit-1/rules.d/
 
 
 mkdir -p ~/git
@@ -9,7 +9,7 @@ TMP_DIR=$(mktemp -d --suffix='.thoth')
 cd $TMP_DIR
 
 # enable tmpfs for tmp
-sudo systemctl enable tmp.mount
+#sudo systemctl enable tmp.mount
 # VV
 curl https://raw.githubusercontent.com/joshuacox/vv/master/bootstrapvv.sh |sudo bash
 # Roustabout
@@ -20,22 +20,21 @@ curl https://raw.githubusercontent.com/joshuacox/bomsaway/master/bootstrapbomsaw
 curl https://raw.githubusercontent.com/joshuacox/local-base/master/bootstrapbase.sh |sudo bash
 
 # Freezing Cyril
-mkdir -p ~/git
-cd ~/git
-git clone https://github.com/joshuacox/freezing-cyril.git
-cd freezing-cyril
-git pull
-cd src
-./freeze
+#cd ~/git
+#git clone https://github.com/joshuacox/freezing-cyril.git
+#cd freezing-cyril
+#git pull
+#cd src
+#./freeze
 
 sudo gpasswd -a $USER docker
 
 # dotfiles
-cd ~/git
-git clone https://github.com/joshuacox/dotfiles.git
-cd dotfiles
-git pull
-make
+#cd ~/git
+#git clone https://github.com/joshuacox/dotfiles.git
+#cd dotfiles
+#git pull
+#make
 
 cd $TMP_DIR
 

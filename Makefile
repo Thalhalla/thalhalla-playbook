@@ -184,6 +184,7 @@ initsudo:
 	$(eval USERNAME := $(shell cat USERNAME))
 	$(eval TARGET := $(shell pwd))
 	@echo "This script requires root access to grant you sudo!"
+	@echo "You will be prompted for the root password."
 	@sleep 1
 	@echo "$(USERNAME)"
 	@echo "$(TARGET)"
@@ -196,6 +197,7 @@ initsudoarch:
 	$(eval USERNAME := $(shell cat USERNAME))
 	$(eval TARGET := $(shell pwd))
 	@echo "This script requires root access to grant you sudo!"
+	@echo "You will be prompted for the root password."
 	@sleep 1
 	@echo "$(USERNAME)"
 	@echo "$(TARGET)"
@@ -210,7 +212,7 @@ netselect:
 
 begin: USERNAME update
 
-beginarch: USERNAME updatearch yaourt
+beginarch: USERNAME updatearch xyne
 
 yaourt:
 	sudo cp pacman.conf /etc/
