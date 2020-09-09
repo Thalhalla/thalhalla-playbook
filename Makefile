@@ -152,7 +152,8 @@ thoth:
 
 azagthoth: SHELL:=/bin/bash --login
 azagthoth:
-	ansible-playbook -i hosts  azagthoth.yml
+	bash bootstrapThothArch.sh
+	#ansible-playbook -i hosts  azagthoth.yml
 
 prep: build localbootstrap
 
