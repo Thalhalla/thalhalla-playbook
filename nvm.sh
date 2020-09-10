@@ -20,3 +20,4 @@ liner
 
 nvm install lts/$release_target
 nvm alias default lts/$release_target
+npm i -g gatsby-cli yarn

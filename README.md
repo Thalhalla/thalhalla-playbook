@@ -52,6 +52,14 @@ make arch
 
 should get you equivalent packages to the debian side of things YMMV
 
+### BlackArch
+
+There is also a script to install the black arch repos for security related tasks
+
+```
+make blackarch
+```
+
 ### Video and Audio
 
 there are a few recipes for video and audio that can be incanted on their own, they are included in the overall debian and arch recipes though
@@ -62,8 +70,13 @@ there are a few recipes for video and audio that can be incanted on their own, t
 
 [Keychain](http://www.funtoo.org/Keychain) is executed at login by either `.zshrc` or `.bash_profile`
 
-#### Vim
+#### Spacevim
 
+``
+make spacevim
+```
+
+Now deprecated is the old
 [SPF13](http://vim.spf13.com/) is the ultimate Distribution of VIM read more on their [site](http://vim.spf13.com/)
 
 #### Zsh
@@ -81,7 +94,7 @@ Ruby 2.1 is installed via rvm and then bundler is installed to take care of the 
 
 #### Nodejs
 
-yeoman is intalled through npm along with a few other goodies
+Yarn and gatsby are intalled through npm along with a few other goodies
 
 ###### Historical
 
