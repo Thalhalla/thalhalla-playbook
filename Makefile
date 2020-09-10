@@ -99,8 +99,7 @@ rubyarch:
 
 zsh: SHELL:=/bin/bash --login
 zsh:
-	curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh|sh
-	chsh -s /usr/bin/zsh
+	./zsh.sh
 
 videodeb: SHELL:=/bin/bash --login
 videodeb:
