@@ -53,7 +53,6 @@ lxrandr
 lynx
 man
 mftrace
-mutt
 ncurses
 nethogs
 net-tools
@@ -168,3 +167,4 @@ libreoffice
 konqueror
 pacgraph
 reflector
+neomutt
