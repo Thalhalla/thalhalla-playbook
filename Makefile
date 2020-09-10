@@ -83,7 +83,7 @@ update:
 	ansible-playbook -i hosts  update.yml
 
 updatearch:
-	sudo pacman -Syu --noconfirm
+	sudo pacman -Syu --noconfirm reflector
 
 nodejs: SHELL:=/bin/bash --login
 nodejs:
