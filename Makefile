@@ -19,7 +19,7 @@ debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb 
 
 #deprecated-arch: USERNAME localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm rclone tmuxinator
 
-arch: initarch localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch nvm rclone tmuxinator
+arch: initarch localbootstraparch beginarch blackarch thalhallaarch azagthoth dev rubyarch nvm rclone tmuxinator
 
 dev: spacevim zsh
 
@@ -66,7 +66,7 @@ builder:
 	/usr/bin/time -v docker build -t thalhalla-test-${RELEASE} -f Dockerfile.${RELEASE} .
 
 nvm:
-	bash  ./nvm.sh
+	./nvm.sh
 
 rundocker:
 	$(eval TMP := $(shell mktemp -d --suffix=ThalhallaDOCKERTMP))
@@ -136,6 +136,7 @@ thalhallaarch: SHELL:=/bin/bash --login
 thalhallaarch:
 	$(eval TARGET_LIST := $(shell cat pacman_list | tr '\n' ' '))
 	sudo powerpill -S --noconfirm $(TARGET_LIST)
+	./bauerbillExtras.sh
 #	ansible-playbook -i hosts  thalhallaarch.yml
 
 thalhalladeb: SHELL:=/bin/bash --login
@@ -223,6 +224,9 @@ netselect:
 begin: USERNAME update
 
 beginarch: USERNAME updatearch xyne
+
+blackarch:
+	./blackArch.sh
 
 yaourt:
 	sudo cp pacman.conf /etc/

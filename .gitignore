@@ -9,3 +9,4 @@ cid
 Dockerfile
 .initsudoarch
 USERNAME
+strap.sh
