@@ -7,8 +7,6 @@ install_jcx_utils () {
   curl https://raw.githubusercontent.com/joshuacox/roustabout/master/bootstraproustabout.sh |sudo bash
   # bomsaway
   curl https://raw.githubusercontent.com/joshuacox/bomsaway/master/bootstrapbomsaway.sh |sudo bash
-  # local-base
-  curl https://raw.githubusercontent.com/joshuacox/local-base/master/bootstrapbase.sh |sudo bash
   # SSShutdown
   curl -sL https://git.io/ssshutdown | bash
   # Swappy
