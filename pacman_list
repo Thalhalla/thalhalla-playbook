@@ -169,3 +169,6 @@ pacgraph
 reflector
 neomutt
 barrier
+heimdall
+adb
+android_udev
