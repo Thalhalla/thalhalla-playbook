@@ -172,3 +172,6 @@ barrier
 heimdall
 adb
 android_udev
+neovim
+neovim-qt
+python-pynvim
