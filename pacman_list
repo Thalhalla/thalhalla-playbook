@@ -171,7 +171,8 @@ neomutt
 barrier
 heimdall
 adb
-android_udev
+android-udev
+android-tools
 neovim
 neovim-qt
 python-pynvim
