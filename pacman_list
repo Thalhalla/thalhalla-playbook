@@ -178,3 +178,5 @@ python-pynvim
 dmenu
 weechat
 aria2
+python-pip
+bc
