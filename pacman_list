@@ -177,3 +177,5 @@ neovim-qt
 python-pynvim
 dmenu
 weechat
+w3m
+lmdb
