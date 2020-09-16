@@ -177,6 +177,8 @@ neovim-qt
 python-pynvim
 dmenu
 weechat
+w3m
+lmdb
 aria2
 python-pip
 bc
