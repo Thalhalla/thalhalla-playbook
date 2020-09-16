@@ -36,7 +36,6 @@ i3
 iftop
 inkscape
 iptraf-ng
-irssi
 kdenlive
 kdiff3
 keychain
@@ -177,3 +176,4 @@ neovim
 neovim-qt
 python-pynvim
 dmenu
+weechat
