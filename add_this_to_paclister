@@ -1,0 +1,4 @@
+#!/bin/bash
+TARGET=$1
+echo $TARGET >> ./pacman_list
+sudo powerpill -S $TARGET
