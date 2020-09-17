@@ -2,6 +2,7 @@
 source "https://rubygems.org"
 
 # gem "rails"
+gem "lolcat"
 gem "tmuxinator"
 gem "jekyll"
 gem 'html-pipeline'

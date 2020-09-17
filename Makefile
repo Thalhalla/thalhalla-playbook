@@ -19,7 +19,7 @@ debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb 
 
 #deprecated-arch: USERNAME localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm rclone tmuxinator
 
-arch: initarch localbootstraparch beginarch thalhallaarch azagthoth spacevim zsh rubyarch nvm rclone tmuxinator
+arch: initarch localbootstraparch beginarch thalhallaarch azagthoth spacevim zsh rubyarch nvm rclone
 
 dev: spacevim zsh
 
@@ -131,7 +131,7 @@ janus:
 	echo 'Janus Documentation |==> https://github.com/carlhuda/janus <==|'
 	sleep 1
 
-thalhallaarch: SHELL:=/bin/bash --login
+thalhallaarch: SHELL:=/bin/bash
 thalhallaarch:
 	$(eval TARGET_LIST := $(shell cat pacman_list | tr '\n' ' '))
 	sudo powerpill -S --noconfirm $(TARGET_LIST)

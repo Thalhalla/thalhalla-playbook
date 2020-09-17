@@ -10,3 +10,4 @@ rm -Rf $TMP_DIR
 }
 
 gem install bundler
+bundle

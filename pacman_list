@@ -185,3 +185,6 @@ bc
 network-manager-applet
 xscreensaver
 python-websocket-client
+conky
+conky-manager
+ponysay
