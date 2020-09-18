@@ -188,3 +188,7 @@ python-websocket-client
 conky
 conky-manager
 ponysay
+feh
+nitrogen
+xorg-xdpyinfo
+xorg-xinit
