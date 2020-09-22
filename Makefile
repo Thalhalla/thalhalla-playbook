@@ -278,3 +278,7 @@ xyne:
 	sudo cp -a pacman.conf /etc/
 	sudo pacman -Sy
 	sudo pacman -S --noconfirm powerpill bauerbill
+
+miniconda:
+	curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh | bash -b -f -p /unreal/miniconda3
+	/unreal/miniconda3/bin/conda init
