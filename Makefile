@@ -19,7 +19,7 @@ debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb 
 
 #deprecated-arch: USERNAME localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm rclone tmuxinator
 
-arch: initarch localbootstraparch beginarch thalhallaarch azagthoth spacevim zsh rubyarch nvm rclone
+arch: initarch localbootstraparch beginarch thalhallaarch azagthoth spacevim zsh rubyarch nvm rclone miniconda
 
 dev: spacevim zsh
 
@@ -280,5 +280,4 @@ xyne:
 	sudo pacman -S --noconfirm powerpill bauerbill
 
 miniconda:
-	curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh | bash -b -f -p /unreal/miniconda3
-	/unreal/miniconda3/bin/conda init
+	bash miniconda-installer
