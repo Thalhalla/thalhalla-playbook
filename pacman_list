@@ -4,6 +4,7 @@ adb
 android-tools
 android-udev
 aria2
+atom
 awesome
 barrier
 base-devel
@@ -17,6 +18,7 @@ bsd-games
 bwm-ng
 byobu
 chromium
+code
 conky
 conky-manager
 cowsay
