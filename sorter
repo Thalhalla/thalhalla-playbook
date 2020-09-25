@@ -1,4 +1,10 @@
 #!/bin/bash
 set -eux
-sort pacman_list |uniq> pacman_list.sorted
-mv -v pacman_list.sorted pacman_list
+
+sorter () {
+  sorted=$1
+  sort $sorted |uniq> $sorted.sorted
+  mv -v $sorted.sorted $sorted
+}
+sorter pacman_list
+sorter bauerbill_list

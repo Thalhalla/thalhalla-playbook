@@ -23,7 +23,7 @@ cowsay
 cpupower
 ctags
 curl
-discord-rpc-api
+discord
 dmenu
 dnsutils
 docker
@@ -48,6 +48,7 @@ grml-zsh-config
 hdparm
 heimdall
 htop
+hub
 hugin
 i3
 iftop
@@ -187,6 +188,8 @@ xbindkeys
 xclip
 xcompmgr
 xf86-input-synaptics
+xorg-server-xvfb
+xorg-xbacklight
 xorg-xdpyinfo
 xorg-xinit
 xsane
@@ -202,5 +205,3 @@ zsh-history-substring-search
 zsh-lovers
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
-xorg-xbacklight
-hub
