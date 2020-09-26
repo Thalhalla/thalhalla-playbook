@@ -207,3 +207,5 @@ zsh-history-substring-search
 zsh-lovers
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
+geckodriver
+nfs-utils
