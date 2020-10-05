@@ -83,7 +83,7 @@ update:
 	ansible-playbook -i hosts  update.yml
 
 updatearch:
-	sudo pacman -Syu --noconfirm reflector
+	sudo pacman -Syu --noconfirm reflector archlinux-keyring
 
 nodejs: SHELL:=/bin/bash --login
 nodejs:
