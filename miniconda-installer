@@ -1,7 +1,8 @@
 #!/bin/bash
+mkdir -p /unreal/miniconda3
 TMP=$(mktemp -d)
 cd $TMP
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash -b -f -p /unreal/miniconda3 $TMP/Miniconda3-latest-Linux-x86_64.sh
+bash $TMP/Miniconda3-latest-Linux-x86_64.sh -b -f -p /unreal/miniconda3 
 /unreal/miniconda3/bin/conda init
 rm -Rf $TMP
