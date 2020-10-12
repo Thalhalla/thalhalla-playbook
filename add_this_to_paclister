@@ -1,4 +1,11 @@
 #!/bin/bash
+#set -eux
+set -eu
 TARGET=$1
-echo $TARGET >> ./pacman_list
-sudo powerpill -S --noconfirm $TARGET
+if [[ $(grep -P "^${TARGET}$" pacman_list) == "$TARGET" ]]; then
+  echo 'Already added'
+else
+  sudo powerpill -S --noconfirm $TARGET
+  echo $TARGET >> ./pacman_list
+  ./sorter
+fi

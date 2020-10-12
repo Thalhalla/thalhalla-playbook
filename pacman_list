@@ -26,6 +26,7 @@ cowsay
 cpupower
 ctags
 curl
+darktable
 discord
 dmenu
 dnsutils
@@ -55,6 +56,7 @@ go
 gparted
 grml-zsh-config
 gvim
+gwenview
 hdparm
 heimdall
 htop
