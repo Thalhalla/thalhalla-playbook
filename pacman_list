@@ -109,6 +109,7 @@ noto-fonts
 opendesktop-fonts
 openssh
 openssl
+openvpn
 opera
 os-prober
 pacgraph
@@ -144,6 +145,7 @@ sdl_ttf
 shellcheck
 sqlite
 sshfs
+sshuttle
 sudo
 synergy
 sysstat
