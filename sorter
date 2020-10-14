@@ -1,10 +1,12 @@
 #!/bin/bash
-set -eux
+#set -eux
+set -eu
 
 sorter () {
   sorted=$1
   sort $sorted |uniq> $sorted.sorted
-  mv -v $sorted.sorted $sorted
+  #mv -v $sorted.sorted $sorted
+  mv $sorted.sorted $sorted
 }
 sorter pacman_list
 sorter bauerbill_list

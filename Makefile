@@ -83,7 +83,9 @@ update:
 	ansible-playbook -i hosts  update.yml
 
 updatearch:
-	sudo pacman -Syu --noconfirm reflector
+	./inner.sh
+	sudo pacman -Syu --noconfirm reflector archlinux-keyring
+	./outer.sh
 
 nodejs: SHELL:=/bin/bash --login
 nodejs:
@@ -134,8 +136,10 @@ janus:
 thalhallaarch: SHELL:=/bin/bash
 thalhallaarch:
 	$(eval TARGET_LIST := $(shell cat pacman_list | tr '\n' ' '))
+	./inner.sh
 	sudo powerpill -S --noconfirm $(TARGET_LIST)
 	./bauerbillExtras.sh
+	./outer.sh
 #	ansible-playbook -i hosts  thalhallaarch.yml
 
 thalhalladeb: SHELL:=/bin/bash --login
@@ -228,10 +232,12 @@ blackarch:
 	./blackArch.sh
 
 yaourt:
+	./inner.sh
 	sudo cp pacman.conf /etc/
 	sudo cp yaourtrc /etc/
 	sudo pacman -Sy --noconfirm yaourt
 	yaourt -S aurvote
+	./outer.sh
 
 rclone:
 	$(eval TMP := $(shell mktemp -d --suffix=ThalhallaDOCKERTMP))
@@ -276,8 +282,10 @@ USERNAME:
 xyne:
 	sudo cp -a xyne-mirrorlist /etc/pacman.d/
 	sudo cp -a pacman.conf /etc/
+	./inner.sh
 	sudo pacman -Sy
 	sudo pacman -S --noconfirm powerpill bauerbill
+	./outer.sh
 
 miniconda:
 	bash miniconda-installer
