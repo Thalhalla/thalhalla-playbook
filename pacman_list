@@ -20,6 +20,7 @@ bwm-ng
 byobu
 chromium
 chrony
+cmake
 code
 conky
 conky-manager
@@ -143,6 +144,7 @@ sddm
 sdl2_ttf
 sdl_ttf
 shellcheck
+soundfont-fluid
 sqlite
 sshfs
 sshuttle
