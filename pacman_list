@@ -72,6 +72,7 @@ iptraf-ng
 joyutils
 kate
 kdenlive
+kdialog
 kdiff3
 keychain
 konqueror
@@ -134,6 +135,7 @@ pv
 python-click-completion
 python-pip
 python-pynvim
+python-qscintilla-qt5
 python-websocket-client
 qemu
 qiv
