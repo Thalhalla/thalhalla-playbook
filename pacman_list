@@ -70,10 +70,12 @@ inkscape
 iotop
 iptraf-ng
 joyutils
+kate
 kdenlive
 kdiff3
 keychain
 konqueror
+krita
 ktorrent
 libffi
 libisoburn
@@ -136,6 +138,7 @@ python-websocket-client
 qemu
 qiv
 readline
+redshift
 reflector
 rogue
 ruby
@@ -223,6 +226,7 @@ xorg-xinit
 xsane
 xscreensaver
 yakuake
+youtube-dl
 zlib
 zsh
 zsh-autosuggestions

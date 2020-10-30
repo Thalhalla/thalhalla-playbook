@@ -11,4 +11,6 @@ install_jcx_utils () {
   curl -sL https://git.io/ssshutdown | bash
   # Swappy
   curl https://raw.githubusercontent.com/joshuacox/swappy/master/bootstrap | bash
+  # Passgen
+  curl https://raw.githubusercontent.com/joshuacox/passgen/master/bootstrappassgen.sh | sh
 }
