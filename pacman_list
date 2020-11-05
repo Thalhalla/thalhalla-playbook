@@ -5,6 +5,7 @@ alsa-utils
 android-tools
 android-udev
 aria2
+asciiquarium
 atom
 awesome
 barrier
@@ -89,6 +90,7 @@ links
 linux-headers
 lmdb
 lolcat
+lshw
 lvm2
 lxrandr
 lynx
