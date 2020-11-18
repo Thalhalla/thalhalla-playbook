@@ -220,6 +220,9 @@ w3m
 weechat
 wget
 whois
+wine
+wine-gecko
+wine-mono
 x11-ssh-askpass
 xbindkeys
 xclip
