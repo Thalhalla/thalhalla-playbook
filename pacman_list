@@ -5,6 +5,7 @@ alsa-utils
 android-tools
 android-udev
 aria2
+ario
 asciiquarium
 atom
 awesome
@@ -19,6 +20,7 @@ bmon
 bsd-games
 bwm-ng
 byobu
+cantata
 chromium
 chrony
 cmake
@@ -97,8 +99,10 @@ lxrandr
 lynx
 man
 mftrace
+mpc
 mtools
 mtr
+ncmpc
 ncurses
 neomutt
 neovim
@@ -114,6 +118,7 @@ nmap
 nodejs
 noto-fonts
 opendesktop-fonts
+openfortivpn
 openssh
 openssl
 openvpn
@@ -122,6 +127,7 @@ os-prober
 pacgraph
 parallel
 pavucontrol
+picard
 pidgin
 pidgin-hotkeys
 pidgin-kwallet
