@@ -6,6 +6,7 @@ android-tools
 android-udev
 aria2
 ario
+asciinema
 asciiquarium
 atom
 awesome
@@ -55,6 +56,7 @@ gdbm
 geckodriver
 gimp
 git
+git-lfs
 gnome
 gnumeric
 go
@@ -140,6 +142,7 @@ playerctl
 playonlinux
 ponysay
 powerline
+powertop
 pro-audio
 purple-skypeweb
 pv
@@ -152,6 +155,7 @@ python-websocket-client
 qemu
 qiv
 readline
+recordmydesktop
 redshift
 reflector
 restic
