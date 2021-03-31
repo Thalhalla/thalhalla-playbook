@@ -9,3 +9,5 @@ else
   echo $TARGET >> ./pacman_list
   ./sorter
 fi
+git commit -s -S -am $TARGET
+git push

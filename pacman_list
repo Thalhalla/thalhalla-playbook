@@ -37,6 +37,7 @@ discord
 dmenu
 dnsutils
 docker
+docker-compose
 dosfstools
 dstat
 efibootmgr
