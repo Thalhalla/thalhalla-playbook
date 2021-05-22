@@ -156,6 +156,8 @@ python-qscintilla-qt5
 python-websocket-client
 qemu
 qiv
+qtcurve-gtk2
+qtcurve-qt5
 readline
 recordmydesktop
 redshift

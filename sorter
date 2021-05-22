@@ -3,10 +3,10 @@
 set -eu
 
 sorter () {
-  sorted=$1
-  sort $sorted |uniq> $sorted.sorted
-  #mv -v $sorted.sorted $sorted
-  mv $sorted.sorted $sorted
+  unsorted=$1
+  sort $unsorted |uniq> $unsorted.sorted
+  #mv -v $unsorted.sorted $unsorted
+  mv $unsorted.sorted $unsorted
 }
 sorter pacman_list
 sorter bauerbill_list
