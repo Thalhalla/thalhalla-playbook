@@ -251,6 +251,7 @@ xorg-server-xvfb
 xorg-xbacklight
 xorg-xdpyinfo
 xorg-xinit
+xorg-xkill
 xsane
 xscreensaver
 yakuake
