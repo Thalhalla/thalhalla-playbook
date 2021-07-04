@@ -177,6 +177,7 @@ soundfont-fluid
 sqlite
 sshfs
 sshuttle
+strace
 sudo
 synergy
 sysstat

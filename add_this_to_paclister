@@ -2,6 +2,7 @@
 #set -eux
 set -eu
 TARGET=$1
+git pull
 if [[ $(grep -P "^${TARGET}$" pacman_list) == "$TARGET" ]]; then
   echo 'Already added'
 else
