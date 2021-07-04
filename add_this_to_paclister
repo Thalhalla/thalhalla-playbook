@@ -1,14 +1,15 @@
 #!/bin/bash
 #set -eux
 set -eu
-TARGET=$1
-git pull
-if [[ $(grep -P "^${TARGET}$" pacman_list) == "$TARGET" ]]; then
-  echo 'Already added'
-else
-  sudo powerpill -S --noconfirm $TARGET
-  echo $TARGET >> ./pacman_list
+. lib/jcx_utils.bash
+
+while [[ "$#" -gt 0 ]]; do
+    adder $1
+    shift
+done
+
+if [[ DID_SOMETHING == 1 ]]; then
   ./sorter
+  git commit -s -S -am "$TARGET"
+  git push
 fi
-git commit -s -S -am $TARGET
-git push

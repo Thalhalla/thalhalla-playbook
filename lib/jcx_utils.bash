@@ -16,3 +16,46 @@ install_jcx_utils () {
   # Clip
   curl -sL https:git.io/clipinstall | bash
 }
+
+puller () {
+  git pull
+  date -I > /tmp/thalhalla-playbook-pulled-today
+}
+
+check_pull () {
+  if [[ ! -f /tmp/thalhalla-playbook-pulled-today ]]; then
+    puller
+  elif [[ ! "$(date -I)" == "$(cat /tmp/thalhalla-playbook-pulled-today)" ]]; then
+    puller
+  else
+    echo 'skip pull'
+  fi
+}
+
+check_hooks () {
+  if [[ -f /etc/ssshutdown/hooks/in ]]; then
+    echo 'Found in hook'
+    sudo bash /etc/ssshutdown/hooks/in
+  fi
+}
+
+check_outhooks () {
+  if [[ -f /etc/ssshutdown/hooks/out ]]; then
+    echo 'Found out hook'
+    sudo bash /etc/ssshutdown/hooks/out
+  fi
+}
+
+adder () {
+  TARGET=$1
+  if [[ $(grep -P "^${TARGET}$" pacman_list) == "$TARGET" ]]; then
+    echo 'Already added'
+  else
+    export DID_SOMETHING=1
+    check_hooks
+    sudo powerpill -S --noconfirm $TARGET
+    check_outhooks
+    check_pull
+    echo "$TARGET" >> ./pacman_list
+  fi
+}
