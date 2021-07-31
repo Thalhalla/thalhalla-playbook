@@ -19,7 +19,7 @@ debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb 
 
 #deprecated-arch: USERNAME localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm rclone tmuxinator
 
-arch: initarch localbootstraparch beginarch thalhallaarch azagthoth spacevim zsh rubyarch nvm rclone miniconda
+arch: initarch localbootstraparch azagthoth beginarch thalhallaarch spacevim zsh rubyarch nvm rclone miniconda
 
 dev: spacevim zsh
 
@@ -217,6 +217,7 @@ initsudoarch: .initsudoarch
 	su -c "bash  $(TARGET)/archinstall_sudo.sh; bash $(TARGET)/acquire_sudo.sh $(USERNAME)"
 	date -I >> .initsudoarch
 	@echo "Now log out and log back in to attain sudo status"
+	exit 1
 
 smxi:
 	sudo bash installsmxi.sh

@@ -89,7 +89,7 @@ libffi
 libisoburn
 libpurple
 libpurple-lurch
-libreoffice
+libreoffice-fresh
 libvirt
 libyaml
 links
@@ -268,3 +268,4 @@ zsh-lovers
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
 strace
+telegram-desktop
