@@ -1,6 +1,5 @@
 abiword
 ack
-adb
 alsa-utils
 android-tools
 android-udev
@@ -11,7 +10,6 @@ asciiquarium
 atom
 awesome
 barrier
-base-devel
 bc
 blender
 bluedevil
@@ -46,8 +44,6 @@ feh
 ffmpeg
 finch
 firefox 
-flashplugin
-font-bh-ttf
 fortune-mod
 freetype2
 frotz-ncurses
@@ -154,6 +150,7 @@ pychess
 python-click-completion
 python-pip
 python-pynvim
+openbsd-netcat
 python-qscintilla-qt5
 python-websocket-client
 qemu
@@ -269,3 +266,4 @@ zsh-syntax-highlighting
 zsh-theme-powerlevel10k
 strace
 telegram-desktop
+phonon-qt5-gstreamer
