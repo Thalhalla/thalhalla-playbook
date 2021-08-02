@@ -269,3 +269,5 @@ zsh-syntax-highlighting
 zsh-theme-powerlevel10k
 strace
 telegram-desktop
+exa
+bat
