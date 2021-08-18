@@ -1,6 +1,5 @@
 abiword
 ack
-adb
 alsa-utils
 android-tools
 android-udev
@@ -11,7 +10,7 @@ asciiquarium
 atom
 awesome
 barrier
-base-devel
+bat
 bc
 blender
 bluedevil
@@ -42,9 +41,11 @@ dosfstools
 dstat
 efibootmgr
 emacs
+exa
 feh
 ffmpeg
 finch
+fio
 firefox 
 fortune-mod
 freetype2
@@ -60,6 +61,7 @@ gnome
 gnumeric
 go
 gparted
+gpg-tui
 grml-zsh-config
 gvim
 gwenview
@@ -118,6 +120,8 @@ nload
 nmap
 nodejs
 noto-fonts
+ntfs-3g
+openbsd-netcat
 opendesktop-fonts
 openfortivpn
 openldap
@@ -130,6 +134,7 @@ pacgraph
 pacman-contrib
 parallel
 pavucontrol
+phonon-qt5-gstreamer
 picard
 pidgin
 pidgin-hotkeys
@@ -175,9 +180,11 @@ soundfont-fluid
 sqlite
 sshfs
 sshuttle
+strace
 sudo
 synergy
 sysstat
+telegram-desktop
 telepathy-haze
 terminator
 thunderbird 
@@ -265,7 +272,3 @@ zsh-history-substring-search
 zsh-lovers
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
-strace
-telegram-desktop
-exa
-bat
