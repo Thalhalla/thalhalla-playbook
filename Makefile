@@ -138,8 +138,8 @@ thalhallaarch: SHELL:=/bin/bash
 thalhallaarch:
 	$(eval TARGET_LIST := $(shell cat pacman_list | tr '\n' ' '))
 	./inner.sh
-	#sudo powerpill -S --noconfirm $(TARGET_LIST)
-	sudo pacman -S --noconfirm $(TARGET_LIST)
+	sudo powerpill -S --noconfirm $(TARGET_LIST)
+	#sudo pacman -S --noconfirm $(TARGET_LIST)
 	./bauerbillExtras.sh
 	./outer.sh
 #	ansible-playbook -i hosts  thalhallaarch.yml

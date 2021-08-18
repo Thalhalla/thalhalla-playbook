@@ -1,6 +1,5 @@
 abiword
 ack
-
 alsa-utils
 android-tools
 android-udev
@@ -11,7 +10,6 @@ asciiquarium
 atom
 awesome
 barrier
-
 bc
 blender
 bluedevil
@@ -46,8 +44,6 @@ feh
 ffmpeg
 finch
 firefox 
-
-
 fortune-mod
 freetype2
 frotz-ncurses
@@ -274,3 +270,5 @@ exa
 phonon-qt5-gstreamer
 bat
 ntfs-3g
+gpg-tui
+fio
