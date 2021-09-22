@@ -86,6 +86,8 @@ updatearch:
 	./inner.sh
 	sudo pacman -Syu --noconfirm reflector archlinux-keyring
 	sudo pacman -S --noconfirm base-devel
+	-sudo pacman -Rdd --noconfirm vim
+	sudo pacman -S --noconfirm gvim
 	./outer.sh
 
 nodejs: SHELL:=/bin/bash --login
