@@ -14,7 +14,7 @@ install_jcx_utils () {
   # Passgen
   curl https://raw.githubusercontent.com/joshuacox/passgen/master/bootstrappassgen.sh | sh
   # Clip
-  curl -sL https:git.io/clipinstall | bash
+  curl -sL https://git.io/clipinstall | bash
 }
 
 puller () {
