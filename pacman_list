@@ -274,3 +274,5 @@ zsh-syntax-highlighting
 zsh-theme-powerlevel10k
 spectacle
 ksysguard
+jupyterlab
+jupyter-notebook
