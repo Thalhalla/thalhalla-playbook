@@ -1,5 +1,5 @@
 #!/bin/bash
-TARGET_RUBY=2.6
+TARGET_RUBY=2.7
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 curl -L get.rvm.io | bash -s stable
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
