@@ -277,6 +277,8 @@ spectacle
 ksysguard
 fd
 procs
+jupyterlab
+jupyter-notebook
 sd
 dust
 ripgrep
