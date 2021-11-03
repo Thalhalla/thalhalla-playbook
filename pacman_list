@@ -275,3 +275,15 @@ zsh-theme-powerlevel10k
 inetutils
 spectacle
 ksysguard
+fd
+procs
+sd
+dust
+ripgrep
+tokei
+hyperfine
+tealdeer
+bandwhich
+zoxide
+nushell
+rust
