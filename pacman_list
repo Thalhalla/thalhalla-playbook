@@ -172,6 +172,7 @@ python-qscintilla-qt5
 python-websocket-client
 qemu
 qiv
+qt5ct
 qtcurve-gtk2
 qtcurve-qt5
 readline
