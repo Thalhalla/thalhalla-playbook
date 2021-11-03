@@ -8,7 +8,7 @@ while [[ "$#" -gt 0 ]]; do
     shift
 done
 
-if [[ DID_SOMETHING == 1 ]]; then
+if [[ $DID_SOMETHING == 1 ]]; then
   ./sorter
   git commit -s -S -am "$TARGET"
   git push
