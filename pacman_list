@@ -102,6 +102,11 @@ libpurple
 libpurple-lurch
 libreoffice-fresh
 libvirt
+libx11
+libxft
+libxinerama
+libxrandr
+libxss
 libyaml
 links
 linux-headers
@@ -156,6 +161,7 @@ pidgin-otr
 pidgin-talkfilters
 pidgin-xmpp-receipts
 pigz
+pkgconf
 plasma-meta
 playerctl
 playonlinux
