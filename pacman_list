@@ -63,6 +63,7 @@ git-lfs
 gnome
 gnumeric
 go
+gopass
 gparted
 gpg-tui
 grml-zsh-config
@@ -271,6 +272,7 @@ x11-ssh-askpass
 xbindkeys
 xclip
 xcompmgr
+xdotool
 xf86-input-synaptics
 xorg-server-xvfb
 xorg-xbacklight
@@ -292,6 +294,3 @@ zsh-history-substring-search
 zsh-lovers
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
-awesome
-gopass
-vicious
