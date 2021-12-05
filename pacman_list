@@ -41,6 +41,7 @@ docker-compose
 dosfstools
 dstat
 dust
+dzen2
 efibootmgr
 emacs
 exa
