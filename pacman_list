@@ -280,6 +280,8 @@ xclip
 xcompmgr
 xdotool
 xf86-input-synaptics
+xmonad
+xmonad-contrib
 xorg-server-xvfb
 xorg-xbacklight
 xorg-xdpyinfo
