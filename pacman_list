@@ -280,6 +280,7 @@ xclip
 xcompmgr
 xdotool
 xf86-input-synaptics
+xmobar
 xmonad
 xmonad-contrib
 xorg-server-xvfb
