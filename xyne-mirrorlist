@@ -16,24 +16,10 @@
 # -----------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
-# The original site, hosted since 2008 or 2009 by Dusty. The URL should be
-#
-# Server = https://xyne.archlinux.ca/repos/xyne
-#
-# but the paid hosting service occasionally messes around with cross-domain
-# ".db" extension filters which block access to the files so the following
-# workaround is provided:
-
-Server = https://xyne.archlinux.ca/bin/repo.php?file=
-# -----------------------------------------------------------------------------
-
-# -----------------------------------------------------------------------------
 # The first mirror, hosted since 2019 by
-# Bryan L. Gay / LinuxNinja
-# Draconian Rose, LLC
-# 2001 Duncan Dr NW Unit 894
-# Kennesaw, GA 30156
-# 1-678-718-8800
-
-Server = https://xyne.mirrorrepo.com/repos/xyne
+# LinuxNinja
+# Ninja Tech Consulting, LLC
+# PO Box 820
+# Holly Springs, GA 30142
+Server = https://xyne.dev/repos/xyne
 # -----------------------------------------------------------------------------
