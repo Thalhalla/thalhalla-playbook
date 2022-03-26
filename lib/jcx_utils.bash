@@ -13,6 +13,8 @@ install_jcx_utils () {
   curl https://raw.githubusercontent.com/joshuacox/swappy/master/bootstrap | bash
   # Passgen
   curl https://raw.githubusercontent.com/joshuacox/passgen/master/bootstrappassgen.sh | sh
+  # wg-init
+  curl https://raw.githubusercontent.com/joshuacox/wg-init/main/bootstrap | sh
   # Clip
   curl -sL https://git.io/clipinstall | bash
 }

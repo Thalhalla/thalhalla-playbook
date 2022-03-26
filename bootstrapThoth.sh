@@ -26,10 +26,10 @@ sudo gpasswd -a $USER docker
 
 # dotfiles
 cd ~/git
-git clone https://github.com/joshuacox/dotfiles.git
-cd dotfiles
-git pull
-make
+#git clone https://github.com/joshuacox/dotfiles.git
+#cd dotfiles
+#git pull
+#make
 
 cd $TMP_DIR
 
