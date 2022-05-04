@@ -278,6 +278,7 @@ wine
 wine-gecko
 wine-mono
 wireguard-tools
+wireshark-cli
 x11-ssh-askpass
 xbindkeys
 xclip
