@@ -35,6 +35,7 @@ curl
 darktable
 discord
 dmenu
+dmidecode
 dnsutils
 docker
 docker-compose
