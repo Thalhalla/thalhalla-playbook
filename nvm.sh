@@ -1,6 +1,7 @@
 #!/bin/bash
 . lib/loader.bash
 release_target=fermium
+npm_packages="gatsby-cli remark remark-cli remark-stringify remark-frontmatter wcwidth prettier"
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
@@ -20,4 +21,6 @@ liner
 
 nvm install lts/$release_target
 nvm alias default lts/$release_target
-npm i -g gatsby-cli yarn
+nvm use lts/$release_target
+npm i -g yarn
+yarn global add $npm_packages
