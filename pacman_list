@@ -180,6 +180,7 @@ procs
 purple-skypeweb
 pv
 pychess
+pyenv
 python-click-completion
 python-pip
 python-pynvim
