@@ -3,11 +3,11 @@ ack
 alsa-utils
 android-tools
 android-udev
+anything-sync-daemon
 aria2
 ario
 asciinema
 asciiquarium
-atom
 awesome
 bandwhich
 barrier
@@ -122,7 +122,6 @@ lvm2
 lxrandr
 lynx
 man-db
-mftrace
 mpc
 mtools
 mtr
@@ -171,7 +170,6 @@ pigz
 pkgconf
 plasma-meta
 playerctl
-playonlinux
 ponysay
 powerline
 powertop
@@ -186,7 +184,7 @@ python-pip
 python-pynvim
 python-qscintilla-qt5
 python-websocket-client
-qemu
+qemu-full
 qiv
 qt5ct
 qtcurve-gtk2
@@ -261,7 +259,7 @@ ttf-liberation
 ttf-linux-libertine
 ttf-linux-libertine-g
 ttf-monofur
-ttf-nerd-fonts-symbols
+ttf-nerd-fonts-symbols-common
 ttf-opensans
 ttf-proggy-clean
 ttf-roboto
