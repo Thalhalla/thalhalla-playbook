@@ -159,6 +159,7 @@ opera
 os-prober
 pacgraph
 pacman-contrib
+pandoc
 parallel
 pavucontrol
 phonon-qt5-gstreamer
