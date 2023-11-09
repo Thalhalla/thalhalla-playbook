@@ -65,6 +65,7 @@ fuse2
 gcc-multilib 
 gdbm
 geckodriver
+geoclue2
 gimp
 git
 git-lfs
