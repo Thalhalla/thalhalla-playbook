@@ -1,6 +1,6 @@
 #!/bin/bash
 #set -eux
-set -e
+set -ex
 . lib/jcx_utils.bash
 
 while [[ "$#" -gt 0 ]]; do

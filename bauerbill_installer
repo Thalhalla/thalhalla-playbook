@@ -1,6 +1,7 @@
 #!/bin/bash
 TARGET=$1
 TMP=$(mktemp -d)
+set -eux
 cd $TMP
 bauerbill -S --aur $TARGET
 cd build
