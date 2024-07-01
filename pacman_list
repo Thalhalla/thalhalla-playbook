@@ -9,6 +9,7 @@ aria2
 ario
 asciinema
 asciiquarium
+autokey-qt
 awesome
 bandwhich
 barrier
@@ -24,7 +25,6 @@ bsd-games
 bwm-ng
 byobu
 calibre
-cantata
 ccache
 chromium
 chrony
@@ -45,7 +45,6 @@ dnsutils
 docker
 docker-compose
 dosfstools
-dstat
 dust
 dzen2
 efibootmgr
@@ -78,6 +77,7 @@ go
 gopass
 gparted
 gpg-tui
+grex
 grml-zsh-config
 gtk-chtheme
 gvim
@@ -107,7 +107,6 @@ kdiff3
 keychain
 konqueror
 krita
-ksysguard
 ktorrent
 kubeadm
 libffi
@@ -131,6 +130,7 @@ lvm2
 lxrandr
 lynx
 man-db
+mcfly
 mkcert
 mpc
 mtools
@@ -147,6 +147,7 @@ net-tools
 network-manager-applet
 nfs-utils
 nitrogen
+nix
 nload
 nmap
 nodejs
@@ -162,10 +163,8 @@ openldap
 openssh
 openssl
 openvpn
-opera
 os-prober
 p7zip
-pacgraph
 pacman-contrib
 pandoc
 parallel
@@ -175,7 +174,6 @@ picard
 pidgin
 pidgin-hotkeys
 pidgin-kwallet
-pidgin-libnotify
 pidgin-otr
 pidgin-talkfilters
 pidgin-xmpp-receipts
@@ -197,19 +195,16 @@ python-click-completion
 python-pip
 python-pynvim
 python-qscintilla-qt5
+python-virtualenv
 python-websocket-client
 qemu-full
-qiv
 qt5ct
-qtcurve-gtk2
-qtcurve-qt5
 readline
 recordmydesktop
 redshift
 reflector
 restic
 ripgrep
-rogue
 ruby
 rustup
 screenkey
@@ -219,22 +214,23 @@ sddm
 sdl2_ttf
 sdl_ttf
 shellcheck
+snapper
 soundfont-fluid
 spectacle
 sqlite
 sshfs
 sshuttle
+starship
 strace
 sudo
-synergy
 sysstat
 tcpdump
 tealdeer
 telegram-desktop
-telepathy-haze
 terminator
 thefuck
 thunderbird 
+tintin
 tilda
 time
 tokei
@@ -264,7 +260,6 @@ ttf-hannom
 ttf-ibm-plex
 ttf-inconsolata
 ttf-indic-otf
-ttf-ionicons
 ttf-jetbrains-mono
 ttf-joypixels
 ttf-junicode
@@ -276,7 +271,6 @@ ttf-linux-libertine-g
 ttf-monofur
 ttf-nerd-fonts-symbols-common
 ttf-opensans
-ttf-proggy-clean
 ttf-roboto
 ttf-roboto-mono
 ttf-sarasa-gothic
@@ -307,6 +301,7 @@ xclip
 xcompmgr
 xdotool
 xf86-input-synaptics
+xf86-video-intel
 xmobar
 xmonad
 xmonad-contrib
@@ -318,10 +313,9 @@ xorg-xkill
 xsane
 xscreensaver
 yakuake
-youtube-dl
+yt-dlp
 zerotier-one
 zlib
-zoxide
 zsh
 zsh-autosuggestions
 zsh-completions
@@ -330,4 +324,3 @@ zsh-doc
 zsh-history-substring-search
 zsh-lovers
 zsh-syntax-highlighting
-zsh-theme-powerlevel10k
