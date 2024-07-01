@@ -114,6 +114,7 @@ libisoburn
 libpurple
 libpurple-lurch
 libreoffice-fresh
+libu2f-server
 libvirt
 libx11
 libxft
@@ -166,6 +167,7 @@ openvpn
 os-prober
 p7zip
 pacman-contrib
+pam-u2f
 pandoc
 parallel
 pavucontrol
@@ -230,9 +232,9 @@ telegram-desktop
 terminator
 thefuck
 thunderbird 
-tintin
 tilda
 time
+tintin
 tokei
 traceroute
 tree
@@ -314,6 +316,10 @@ xsane
 xscreensaver
 yakuake
 yt-dlp
+yubico-pam
+yubico-piv-tool
+yubikey-personalization-gui
+yubioath-desktop
 zerotier-one
 zlib
 zsh
