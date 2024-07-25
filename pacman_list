@@ -67,8 +67,8 @@ geckodriver
 geoclue2
 gimp
 git
-github-cli
 git-lfs
+github-cli
 glow
 gnome
 gnumeric
@@ -97,8 +97,8 @@ iptables-nft
 iptraf-ng
 joyutils
 jq
-jupyterlab
 jupyter-notebook
+jupyterlab
 kate
 kde-gtk-config
 kdenlive
@@ -142,9 +142,9 @@ ncurses
 neomutt
 neovim
 neovim-qt
+net-tools
 nethack
 nethogs
-net-tools
 network-manager-applet
 nfs-utils
 nitrogen
@@ -322,11 +322,12 @@ yubikey-personalization-gui
 yubioath-desktop
 zerotier-one
 zlib
+zoxide
 zsh
 zsh-autosuggestions
 zsh-completions
-zshdb
 zsh-doc
 zsh-history-substring-search
 zsh-lovers
 zsh-syntax-highlighting
+zshdb
