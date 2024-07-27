@@ -221,6 +221,7 @@ sddm
 sdl2_ttf
 sdl_ttf
 shellcheck
+signal-desktop
 snapper
 soundfont-fluid
 spectacle
