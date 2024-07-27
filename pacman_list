@@ -314,6 +314,7 @@ xf86-video-intel
 xmobar
 xmonad
 xmonad-contrib
+xonsh
 xorg-server-xvfb
 xorg-xbacklight
 xorg-xdpyinfo
