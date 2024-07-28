@@ -61,3 +61,35 @@ adder () {
     echo "$TARGET" >> ./pacman_list
   fi
 }
+
+bauer_adder () {
+  TARGET=$1
+  if [[ $(grep -P "^${TARGET}$" bauerbill_list) == "$TARGET" ]]; then
+    echo 'Already added'
+  else
+    export DID_SOMETHING=1
+    check_hooks
+    bauerbill_installer $TARGET
+    check_outhooks
+    check_pull
+    echo "$TARGET" >> ./bauerbill_list
+  fi
+}
+
+bauerbill_installer () {
+  TARGET=$1
+  TMP=$(mktemp -d)
+  set -eux
+  cd $TMP
+  bauerbill -S --aur $TARGET
+  cd build
+  if [[ -f ./download.sh ]]; then 
+    yes M | ./download.sh
+  fi
+  if [[ -f ./build.sh ]]; then 
+    yes y | ./build.sh
+  fi
+  if [[ -f ./clean.sh ]]; then 
+    ./clean.sh
+  fi
+}

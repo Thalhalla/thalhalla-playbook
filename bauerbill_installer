@@ -1,16 +1,21 @@
 #!/bin/bash
-TARGET=$1
-TMP=$(mktemp -d)
-set -eux
-cd $TMP
-bauerbill -S --aur $TARGET
-cd build
-if [[ -f ./download.sh ]]; then 
-  yes M | ./download.sh
-fi
-if [[ -f ./build.sh ]]; then 
-  yes y | ./build.sh
-fi
-if [[ -f ./clean.sh ]]; then 
-  ./clean.sh
-fi
+
+bauerbill_installer () {
+  TARGET=$1
+  TMP=$(mktemp -d)
+  set -eux
+  cd $TMP
+  bauerbill -S --aur $TARGET
+  cd build
+  if [[ -f ./download.sh ]]; then 
+    yes M | ./download.sh
+  fi
+  if [[ -f ./build.sh ]]; then 
+    yes y | ./build.sh
+  fi
+  if [[ -f ./clean.sh ]]; then 
+    ./clean.sh
+  fi
+}
+
+bauerbill_installer @

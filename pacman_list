@@ -49,6 +49,7 @@ dust
 dzen2
 efibootmgr
 element-desktop
+elinks
 elvish
 emacs
 etckeeper
@@ -139,6 +140,7 @@ man-db
 mcfly
 mkcert
 mpc
+mpop
 mtools
 mtr
 ncdu
