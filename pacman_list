@@ -198,6 +198,7 @@ procs
 profile-sync-daemon
 purple-skypeweb
 pv
+pwgen
 pychess
 pyenv
 python-click-completion
