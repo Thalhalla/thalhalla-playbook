@@ -214,12 +214,10 @@ sshfs
 sshuttle
 strace
 sudo
-synergy
 sysstat
 tcpdump
 tealdeer
 telegram-desktop
-telepathy-haze
 terminator
 thunderbird 
 tilda
@@ -251,7 +249,6 @@ ttf-hannom
 ttf-ibm-plex
 ttf-inconsolata
 ttf-indic-otf
-ttf-ionicons
 ttf-jetbrains-mono
 ttf-joypixels
 ttf-junicode
@@ -263,7 +260,6 @@ ttf-linux-libertine-g
 ttf-monofur
 ttf-nerd-fonts-symbols
 ttf-opensans
-ttf-proggy-clean
 ttf-roboto
 ttf-roboto-mono
 ttf-sarasa-gothic
@@ -301,10 +297,9 @@ xorg-xbacklight
 xorg-xdpyinfo
 xorg-xinit
 xorg-xkill
-xsane
 xscreensaver
 yakuake
-youtube-dl
+yt-dlp
 zerotier-one
 zlib
 zoxide
