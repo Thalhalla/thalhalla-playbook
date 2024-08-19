@@ -4,7 +4,7 @@ set -ex
 . lib/jcx_utils.bash
 
 while [[ "$#" -gt 0 ]]; do
-    adder $1
+    bauer_adder $1
     shift
 done
 
