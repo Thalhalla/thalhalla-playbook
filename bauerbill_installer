@@ -18,4 +18,4 @@ bauerbill_installer () {
   fi
 }
 
-bauerbill_installer @
+bauerbill_installer $@
