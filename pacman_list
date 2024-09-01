@@ -138,6 +138,7 @@ linux-headers
 lmdb
 lolcat
 lshw
+luarocks
 lvm2
 lxrandr
 lynx
