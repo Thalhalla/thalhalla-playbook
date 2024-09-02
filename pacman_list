@@ -68,6 +68,7 @@ fortune-mod
 freetype2
 frotz-ncurses
 fuse2
+fzf
 gcc-multilib 
 gdbm
 gdu
