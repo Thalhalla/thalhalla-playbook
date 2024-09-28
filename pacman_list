@@ -5,6 +5,13 @@ android-tools
 android-udev
 ant
 anything-sync-daemon
+arduino-avr-core
+arduino-builder
+arduino-cli
+arduino-ctags
+arduino-fwuploader
+arduino-ide
+arduino-language-server
 aria2
 ario
 asciinema
