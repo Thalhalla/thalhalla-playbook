@@ -18,8 +18,8 @@ initdebian: USERNAME initsudo
 debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb audiodeb rclone smxi
 
 #deprecated-arch: USERNAME localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm rclone tmuxinator
-
-arch: initarch localbootstraparch azagthoth beginarch thalhallaarch spacevim zsh rubyarch nvm rclone miniconda
+# arch: initarch localbootstraparch azagthoth beginarch thalhallaarch spacevim zsh rubyarch nvm rclone miniconda
+arch: initarch localbootstraparch azagthoth beginarch thalhallaarch spacevim zsh nvm rclone miniconda
 
 dev: spacevim zsh
 
@@ -88,6 +88,7 @@ updatearch:
 	sudo pacman -S --noconfirm base-devel
 	-sudo pacman -Rdd --noconfirm vim
 	sudo pacman -S --noconfirm gvim
+	sudo pacman -S --noconfirm iptables-nft
 	./outer.sh
 
 nodejs: SHELL:=/bin/bash --login
