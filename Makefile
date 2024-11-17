@@ -88,7 +88,7 @@ updatearch:
 	sudo pacman -S --noconfirm base-devel
 	-sudo pacman -Rdd --noconfirm vim
 	sudo pacman -S --noconfirm gvim
-	sudo pacman -S --noconfirm iptables-nft
+	sudo pacman -S iptables-nft
 	./outer.sh
 
 nodejs: SHELL:=/bin/bash --login

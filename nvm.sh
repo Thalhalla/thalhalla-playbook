@@ -1,6 +1,6 @@
 #!/bin/bash
 . lib/loader.bash
-release_target=fermium
+release_target=gallium
 npm_packages="gatsby-cli remark remark-cli remark-stringify remark-frontmatter wcwidth prettier"
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
