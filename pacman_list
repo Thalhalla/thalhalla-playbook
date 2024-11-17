@@ -359,6 +359,7 @@ xmobar
 xmonad
 xmonad-contrib
 xonsh
+xorg-mkfontscale
 xorg-server-xvfb
 xorg-xbacklight
 xorg-xdpyinfo

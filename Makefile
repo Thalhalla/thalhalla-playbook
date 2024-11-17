@@ -19,7 +19,7 @@ debian: localbootstrap begin thalhalladeb nodejs thoth dev ruby bundle videodeb 
 
 #deprecated-arch: USERNAME localbootstraparch beginarch thalhallaarch azagthoth dev rubyarch bundle videoarch audioarch nvm rclone tmuxinator
 # arch: initarch localbootstraparch azagthoth beginarch thalhallaarch spacevim zsh rubyarch nvm rclone miniconda
-arch: initarch localbootstraparch azagthoth beginarch thalhallaarch spacevim zsh nvm rclone miniconda
+arch: initarch localbootstraparch azagthoth beginarch thalhallaarch spacevim zsh nvm rclone
 
 dev: spacevim zsh
 

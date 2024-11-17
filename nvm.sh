@@ -1,9 +1,9 @@
 #!/bin/bash
 . lib/loader.bash
-release_target=gallium
+release_target=iron
 npm_packages="gatsby-cli remark remark-cli remark-stringify remark-frontmatter wcwidth prettier"
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
