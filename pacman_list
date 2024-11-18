@@ -23,6 +23,7 @@ awesome
 aws-cli
 bandwhich
 barrier
+bash-completion
 bat
 bc
 bleachbit
@@ -67,6 +68,7 @@ elinks
 elvish
 emacs
 etckeeper
+ethtool
 exa
 fd
 feh
@@ -88,8 +90,8 @@ geckodriver
 geoclue2
 gimp
 git
-git-lfs
 github-cli
+git-lfs
 gitui
 glow
 gnome
@@ -122,8 +124,8 @@ iptraf-ng
 joyutils
 jq
 julia
-jupyter-notebook
 jupyterlab
+jupyter-notebook
 kate
 kde-gtk-config
 kdenlive
@@ -171,9 +173,9 @@ ncurses
 neomutt
 neovim
 neovim-qt
-net-tools
 nethack
 nethogs
+net-tools
 network-manager-applet
 nfs-utils
 nitrogen
@@ -381,8 +383,8 @@ zoxide
 zsh
 zsh-autosuggestions
 zsh-completions
+zshdb
 zsh-doc
 zsh-history-substring-search
 zsh-lovers
 zsh-syntax-highlighting
-zshdb
