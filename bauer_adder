@@ -1,14 +1,17 @@
 #!/bin/bash
 #set -eux
+export THIS_CWD=$(pwd)
 set -ex
 . lib/jcx_utils.bash
 
 while [[ "$#" -gt 0 ]]; do
+    pwd
     bauer_adder $1
     shift
 done
 
 if [[ $DID_SOMETHING == 1 ]]; then
+  pwd
   ./sorter
   git commit -s -S -am "$TARGET"
   git push

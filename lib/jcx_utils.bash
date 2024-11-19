@@ -63,14 +63,18 @@ adder () {
 }
 
 bauer_adder () {
+  set -x
   TARGET=$1
+  cd $THIS_CWD
   PWD=$(pwd)
   if [[ $(grep -P "^${TARGET}$" bauerbill_list) == "$TARGET" ]]; then
     echo 'Already added'
   else
     export DID_SOMETHING=1
     check_hooks
+    cd $THIS_CWD
     bauerbill_installer $TARGET
+    cd $THIS_CWD
     check_outhooks
     cd $PWD
     check_pull
