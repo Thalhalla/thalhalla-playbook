@@ -70,6 +70,8 @@ emacs
 etckeeper
 ethtool
 exa
+exfatprogs
+exfat-utils
 fd
 feh
 ffmpeg
