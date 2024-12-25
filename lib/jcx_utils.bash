@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [[ $USE_POWERPILL == 'true' ]]; then
+  PACMAN=powerpill
+else
+  PACMAN=pacman
+fi
+
 install_jcx_utils () {
   # VV
   curl https://raw.githubusercontent.com/joshuacox/vv/master/bootstrapvv.sh |sudo bash
@@ -55,7 +61,8 @@ adder () {
   else
     export DID_SOMETHING=1
     check_hooks
-    sudo powerpill -S --noconfirm $TARGET
+    #sudo powerpill -S --noconfirm $TARGET
+    sudo $PACMAN -S --noconfirm $TARGET
     check_outhooks
     check_pull
     echo "$TARGET" >> ./pacman_list
