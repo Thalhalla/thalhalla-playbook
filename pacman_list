@@ -14,6 +14,7 @@ arduino-ctags
 arduino-fwuploader
 arduino-ide
 arduino-language-server
+argocd
 aria2
 ario
 asciinema
@@ -249,7 +250,9 @@ python-qscintilla-qt5
 python-virtualenv
 python-websocket-client
 qemu-full
+qt5-base
 qt5ct
+qtcreator
 readline
 recordmydesktop
 redshift
