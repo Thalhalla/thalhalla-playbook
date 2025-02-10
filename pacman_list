@@ -59,6 +59,7 @@ dmenu
 dmidecode
 dnsutils
 docker
+docker-buildx
 docker-compose
 dosfstools
 dust
