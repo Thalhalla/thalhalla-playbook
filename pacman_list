@@ -87,6 +87,7 @@ freetype2
 frotz-ncurses
 fuse2
 fzf
+gamemode
 gcc-multilib 
 gdbm
 gdu
@@ -109,6 +110,7 @@ grex
 grml-zsh-config
 gtk-chtheme
 guake
+gvfs
 gvim
 gwenview
 hdparm
@@ -123,6 +125,7 @@ iftop
 imagemagick
 inetutils
 inkscape
+innoextract
 inotify-tools
 iotop
 iptables-nft
@@ -146,6 +149,8 @@ ktorrent
 kubeadm
 kwalletmanager
 lazygit
+lib32-gamemode
+lib32-vkd3d
 libffi
 libisoburn
 libpurple
@@ -249,6 +254,7 @@ python-lxc
 python-openstacksdk
 python-ovirt-engine-sdk
 python-pip
+python-protobuf
 python-proxmoxer
 python-pynetbox
 python-pynvim
@@ -344,12 +350,14 @@ ttf-sarasa-gothic
 ttf-sazanami
 ttf-tibetan-machine
 ttf-ubuntu-font-family
+umu-launcher
 usbutils
 uv
 vi
 vicious
 virt-manager
 vivaldi
+vkd3d
 vlc
 vnstat
 vorbis-tools
