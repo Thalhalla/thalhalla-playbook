@@ -63,6 +63,7 @@ docker
 docker-buildx
 docker-compose
 dos2unix
+dosbox
 dosfstools
 dust
 dzen2
