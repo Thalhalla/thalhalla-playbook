@@ -1,5 +1,4 @@
 abiword
-ack
 acme-tiny
 alsa-utils
 android-tools
@@ -7,10 +6,7 @@ android-udev
 ansible
 ant
 anything-sync-daemon
-arduino-avr-core
-arduino-builder
 arduino-cli
-arduino-ctags
 arduino-fwuploader
 arduino-ide
 arduino-language-server
@@ -23,7 +19,6 @@ autokey-qt
 awesome
 aws-cli
 bandwhich
-barrier
 bash-completion
 bat
 bc
@@ -343,7 +338,6 @@ ttf-ibm-plex
 ttf-inconsolata
 ttf-indic-otf
 ttf-jetbrains-mono
-ttf-joypixels
 ttf-junicode
 ttf-khmer
 ttf-lato
@@ -409,7 +403,6 @@ yt-dlp
 yubico-pam
 yubico-piv-tool
 yubikey-personalization-gui
-yubioath-desktop
 zerotier-one
 zlib
 zoxide
