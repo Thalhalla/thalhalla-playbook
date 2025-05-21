@@ -141,6 +141,8 @@ thalhallaarch: SHELL:=/bin/bash
 thalhallaarch:
 	$(eval TARGET_LIST := $(shell cat pacman_list | tr '\n' ' '))
 	./inner.sh
+	yes Y|sudo pacman -S iptables-nft
+	yes Y|sudo pacman -S gvim
 	sudo powerpill -S --overwrite '/*' --noconfirm $(TARGET_LIST)
 	./bauerbillExtras.sh
 	./python.sh
