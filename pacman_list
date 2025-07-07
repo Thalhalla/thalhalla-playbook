@@ -23,6 +23,7 @@ bandwhich
 bash-completion
 bat
 bc
+bigsh0t
 bleachbit
 blender
 bluedevil
@@ -291,6 +292,7 @@ sddm
 sdl2_ttf
 sdl_ttf
 shellcheck
+shotcut
 signal-desktop
 smbclient
 snapper
