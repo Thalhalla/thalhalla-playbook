@@ -282,6 +282,7 @@ restic
 ripgrep
 rlwrap
 ruby
+ruby-build
 rustup
 samba
 scratch
