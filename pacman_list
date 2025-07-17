@@ -296,6 +296,7 @@ sdl_ttf
 shellcheck
 shotcut
 signal-desktop
+sloccount
 smbclient
 snapper
 soundfont-fluid
