@@ -108,6 +108,7 @@ gnumeric
 gnuplot
 go
 gopass
+go-yq
 gparted
 gpg-tui
 grex
@@ -216,7 +217,6 @@ openconnect
 opendesktop-fonts
 openfortivpn
 openldap
-openresolv
 openssh
 openssl
 opentofu
@@ -228,7 +228,6 @@ pam-u2f
 pandoc
 parallel
 pavucontrol
-phonon-qt5-gstreamer
 picard
 pidgin
 pidgin-hotkeys
