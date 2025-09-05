@@ -8,7 +8,6 @@ ant
 anything-sync-daemon
 arduino-cli
 arduino-fwuploader
-arduino-ide
 arduino-language-server
 argocd
 aria2
