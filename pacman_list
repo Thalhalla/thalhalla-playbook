@@ -103,6 +103,7 @@ git
 github-cli
 git-lfs
 gitui
+glib2
 glow
 gnome
 gnumeric
@@ -160,10 +161,12 @@ lazygit
 lib32-gamemode
 lib32-vkd3d
 libffi
+libgcrypt
 libisoburn
 libpurple
 libpurple-lurch
 libreoffice-fresh
+libslirp
 libu2f-server
 libvirt
 libx11
@@ -237,6 +240,7 @@ pidgin-otr
 pidgin-talkfilters
 pidgin-xmpp-receipts
 pigz
+pixman
 pkgconf
 plasma-meta
 playerctl
@@ -291,6 +295,7 @@ screenkey
 scummvm
 sd
 sddm
+sdl2
 sdl2_ttf
 sdl_ttf
 shellcheck
