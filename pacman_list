@@ -21,6 +21,10 @@ aws-cli
 bandwhich
 bash-completion
 bat
+bats
+bats-assert
+bats-file
+bats-support
 bc
 bigsh0t
 bleachbit
