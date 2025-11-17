@@ -38,11 +38,13 @@ bsd-games
 btop
 bwm-ng
 byobu
+cabal-install
 calibre
 ccache
 cheese
 chromium
 chrony
+clojure
 clusterssh
 cmake
 cockpit
@@ -63,6 +65,7 @@ datree
 direnv
 discord
 distrobox
+dlang-dmd
 dmenu
 dmidecode
 dnsutils
@@ -77,12 +80,15 @@ dzen2
 efibootmgr
 element-desktop
 elinks
+elixir
 elvish
 emacs
+erlang
 etckeeper
 ethtool
 exa
 exfat-utils
+fastfetch
 fd
 feh
 ffmpeg
@@ -107,6 +113,7 @@ git
 github-cli
 git-lfs
 gitui
+gleam
 glib2
 glow
 gnome
@@ -135,6 +142,7 @@ hyperfine
 i3
 iftop
 imagemagick
+impala
 inetutils
 inkscape
 innoextract
@@ -157,11 +165,14 @@ kdiff3
 keychain
 kompose
 konqueror
+kotlin
 krita
 ktorrent
 kubeadm
 kwalletmanager
+lazydocker
 lazygit
+leiningen
 lib32-gamemode
 lib32-vkd3d
 libffi
@@ -217,6 +228,7 @@ ntfs-3g
 nushell
 obsidian
 obs-studio
+ocaml
 octave
 okular
 ollama
@@ -282,6 +294,7 @@ qemu-full
 qt5-base
 qt5ct
 qtcreator
+racket
 readline
 recordmydesktop
 redshift
@@ -295,6 +308,7 @@ ruby-build
 rustup
 samba
 scratch
+screen
 screenkey
 scummvm
 sd
@@ -425,6 +439,7 @@ yubico-pam
 yubico-piv-tool
 yubikey-personalization-gui
 zerotier-one
+zig
 zlib
 zoxide
 zsh
