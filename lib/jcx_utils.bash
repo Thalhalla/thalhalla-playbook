@@ -48,38 +48,41 @@ adder () {
     check_hooks
     #sudo powerpill -S --noconfirm $TARGET
     sudo $PACMAN -S --noconfirm $TARGET
+    if [[ ! $? -eq 0 ]]; then 
+      auradder $TARGET
+    fi
     check_outhooks
     check_pull
     echo "$TARGET" >> ./pacman_list
   fi
 }
 
-bauer_adder () {
+aur_adder () {
   set -x
   TARGET=$1
   cd $THIS_CWD
   PWD=$(pwd)
-  if [[ $(grep -P "^${TARGET}$" bauerbill_list) == "$TARGET" ]]; then
+  if [[ $(grep -P "^${TARGET}$" aur_list) == "$TARGET" ]]; then
     echo 'Already added'
   else
     export DID_SOMETHING=1
     check_hooks
     cd $THIS_CWD
-    bauerbill_installer $TARGET
+    aur_installer $TARGET
     cd $THIS_CWD
     check_outhooks
     cd $PWD
     check_pull
-    echo "$TARGET" >> ./bauerbill_list
+    echo "$TARGET" >> ./aur_list
   fi
 }
 
-bauerbill_installer () {
+aur_installer () {
   TARGET=$1
   TMP=$(mktemp -d)
   set -eux
   cd $TMP
-  bauerbill -S --aur $TARGET
+  yay -S $TARGET
   cd build
   if [[ -f ./download.sh ]]; then 
     yes M | ./download.sh

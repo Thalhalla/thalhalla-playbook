@@ -9,4 +9,4 @@ sorter () {
   mv $unsorted.sorted $unsorted
 }
 sorter pacman_list
-sorter bauerbill_list
+sorter aur_list

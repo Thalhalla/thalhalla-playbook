@@ -144,7 +144,7 @@ thalhallaarch:
 	yes Y|sudo pacman -S iptables-nft
 	yes Y|sudo pacman -S gvim
 	sudo powerpill -S --overwrite '/*' --noconfirm $(TARGET_LIST)
-	./bauerbillExtras.sh
+	./aurExtras.sh
 	./python.sh
 	./outer.sh
 #	ansible-playbook -i hosts  thalhallaarch.yml
@@ -234,7 +234,7 @@ netselect:
 
 begin: USERNAME update
 
-beginarch: USERNAME updatearch xyne
+beginarch: USERNAME updatearch
 
 blackarch:
 	./blackArch.sh
@@ -288,6 +288,8 @@ USERNAME:
 	whoami > USERNAME
 
 xyne:
+	echo 'xyne is missing in action'
+	exit 1
 	sudo cp -a xyne-mirrorlist /etc/pacman.d/
 	sudo cp -a pacman.conf /etc/
 	./inner.sh
