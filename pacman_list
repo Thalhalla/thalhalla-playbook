@@ -145,6 +145,7 @@ gopass
 go-yq
 gparted
 gpg-tui
+gping
 grex
 grml-zsh-config
 gst-libav
@@ -184,6 +185,7 @@ kdenlive
 kdialog
 kdiff3
 keychain
+kmon
 kompose
 konqueror
 kotlin
