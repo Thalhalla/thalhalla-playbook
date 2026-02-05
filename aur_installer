@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+. lib/jcx_utils.bash
 
 aur_installer $@

@@ -165,7 +165,6 @@ heimdall
 helm
 hledger
 htop
-httm
 hub
 hugin
 hyperfine
@@ -367,6 +366,7 @@ sqlite
 sshfs
 sshuttle
 starship
+stow
 strace
 strawberry
 sudo
